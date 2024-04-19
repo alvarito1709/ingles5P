@@ -1,0 +1,62 @@
+*{
+    font-family:  sans-serif;
+}
+
+
+.bodyContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e5e5e5;
+}
+
+.loginContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    color: black;
+}
+
+form{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+#iconContainer{
+    background-color: #c5c3c2;
+    border-radius: 100%;
+    margin: auto;
+}
+
+#userIcon{
+    width: 100px;
+    height: 100px;
+    fill: whitesmoke;
+}
+
+input{
+    text-align: center;
+    padding: 1px;
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    font-weight: 600;
+    width: 204px;
+}

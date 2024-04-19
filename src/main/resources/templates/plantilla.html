@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inglés para el Trabajo</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}" >
+    <link rel="stylesheet" th:href="@{/css/index.css}" >
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+<header class="main-header" th:fragment="header">
+    <div class="logo">
+        <!-- Aquí puedes poner tu logotipo o título -->
+        <span><img th:src="@{/img/logoAgencia.png}" alt="logo BA" id="logoAgencia"></span>
+    </div>
+
+    <div id="loguearse" th:if="${usuario}" >
+        <form method="POST" th:action="@{/logout}">
+            <a  href="#" onclick="this.parentNode.submit()"><iconify-icon icon="material-symbols:logout-sharp" style="color: #333;" width="35" height="35"></iconify-icon></a>
+        </form>
+    </div>
+
+</header>
+
+<div id="bannerContainer">
+
+    <img th:src="@{/img/banner.jpeg}">
+
+    <div id="titleContainer">
+        <span class="blackLine"></span>
+        <h1> <span class="orangeTitle">INGLÉS</span>
+           <br> PARA EL
+            <br> TRABAJO</h1>
+    </div>
+</div>
+
+<div id="logSection">
+    <div id="infoSection">
+        <h3>¿Qué es Inglés para <span class="orangeTitle">el trabajo?</span></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec et quam blandit, vestibulum metus nec, fermentum mauris.
+            Vivamus sed blandit augue. Maecenas sagittis volutpat elementum.
+            Sed mi sem, congue lacinia ante et, dignissim aliquet metus.
+        </p>
+    </div>
+    <span class="blackLine"></span>
+    <div id="authSection" th:unless="${usuario}">
+
+        <h4>INGRESO CON <span class="orangeTitle">DOCUMENTO</span></h4>
+       <a th:href="@{/login}"><button>INGRESO</button></a>
+
+    </div>
+    <div id="authSection" th:if="${usuario}">
+
+        <h4>IR A MI  <span class="orangeTitle">CURSO</span></h4>
+        <a th:href="@{/board}"><button>INGRESO</button></a>
+
+    </div>
+</div>
+
+<footer class="footer-mobile" th:fragment="footer-mobile">
+    <!-- <link rel="stylesheet" href="/css footer/footer-mobile.css"> -->
+    <div class="footer-img-vamosba">
+        <img th:src="@{/img/ba_vamosba_blanco.webp}" alt="">
+    </div>
+
+    <div class="footer-telefonos-utiles">
+        <p>Teléfonos Utiles</p>
+        <div class="footer-telefonos-utiles-numeros">
+            <div class="footer-tel-item-num"> <a href="tel:102"><span>102</span></a>
+                <p>Niñez y Adolescencia</p>
+            </div>
+            <div class="footer-tel-item-num"> <a href="tel:103"><span>103</span></a>
+                <p>Emergencias</p>
+            </div>
+            <div class="footer-tel-item-num"> <a href="tel:107"><span>107</span></a>
+                <p>SAME</p>
+            </div>
+            <div class="footer-tel-item-num"> <a href="tel:911"><span>911</span></a>
+                <p>Policía</p>
+            </div>
+            <div class="footer-tel-item-num"> <a href="tel:147"><span>147</span></a>
+                <p>Atención ciudadana</p>
+            </div>
+            <div class="footer-tel-item-num"> <a href="tel:144"><span>144</span></a>
+                <p>Violencia de género</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-ver-todos-tel"> <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles"><span>Ver
+                    todos los Teléfonos</span></a></div>
+    <div class="footer-redes">
+
+        <p>Redes de la Ciudad</p>
+        <div class="redes-iconos">
+            <a href="https://www.facebook.com/GCBA/" target="blank">
+                <i class="iconify" id="face" data-icon="gg:facebook"
+                   style="color: white; width: 25px;height: 25px;"></i>
+            </a>
+            <a href="https://twitter.com/gcba" target="blank">
+                <i class="iconify" data-icon="line-md:twitter-x-alt"
+                   style="color: white;width: 25px;height: 25px;"></i>
+            </a>
+            <a href="https://www.instagram.com/buenosaires/" target="blank">
+                <i class="iconify" data-icon="bi:instagram" style="color: white;width: 25px;height: 25px;"></i>
+            </a>
+            <a href="https://www.youtube.com/user/GCBA" target="blank">
+                <i class="iconify" data-icon="fa:youtube" style="color: white;width: 25px;height: 25px;"></i>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-legales">
+        <img th:src="@{/img/ciudad-ba.webp}" alt="">
+        <p>Los contenidos de buenosaires.gob.ar están licenciados bajo Creative Commons Reconocimiento 2.5 Argentina
+            License.</p>
+        <div class="footer-legales-items">
+            <a href="https://boletinoficial.buenosaires.gob.ar/"><span>Boletín Oficial</span></a>
+            <a href="https://www.buenosaires.gob.ar/innovacion/ciudadinteligente/terminos-y-condiciones"><span>Términos
+                        y condiciones</span></a>
+            <a href="https://www.buenosaires.gob.ar/privacidad"><span>Política de Privacidad</span></a>
+            <a href="https://www.buenosaires.gob.ar/oficiosjudiciales"><span>Oficios Judiciales</span></a>
+        </div>
+    </div>
+</footer>
+<footer class="footer-web" th:fragment="footer-web">
+    <script th:src="@{https://code.iconify.design/2/2.2.1/iconify.min.js}"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <div class="contenedor-fot-prin">
+        <div class="fot-sup">
+            <div class="logo-ba-fot">
+                <a href="http://www.buenosaires.gob.ar/" target="blank">
+                    <img th:src="@{/img/ba_vamosba_blanco.webp}" alt="Logo Vamos Buenos Aires">
+                </a>
+            </div>
+            <div class="fot-sup-cont">
+                <div class="fot-cont-sup-titulos">
+                    <div class="fot-cont-titulos">
+                        <p>Teléfonos útiles</p>
+                        <a href="https://www.buenosaires.gob.ar/laciudad/telefonosutiles" target="blank">
+                            <p>Ver todos los teléfonos</p>
+                        </a>
+                    </div>
+                    <div class="fot-cont-tel">
+                        <div>
+                            <a href="tel:102" target="blank"><span>102</span></a>
+                            <p>Niñez y Adolescencia</p>
+                        </div>
+                        <div>
+                            <a href="tel:103" target="blank"><span>103</span></a>
+                            <p>Emergencias</p>
+                        </div>
+                        <div>
+                            <a href="tel:107" target="blank"><span>107</span></a>
+                            <p>SAME</p>
+                        </div>
+                        <div>
+                            <a href="tel:911" target="blank"><span>911</span></a>
+                            <p>Policía</p>
+                        </div>
+                        <div>
+                            <a href="tel:147" target="blank"><span>147</span></a>
+                            <p>Atención ciudadana</p>
+                        </div>
+                        <div>
+                            <a href="tel:144" target="blank"><span>144</span></a>
+                            <p>Violencia de género</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="fot-cont-inf">
+                    <div class="fot-cont-inf-titulos-redes">
+                        <p>Redes de la Ciudad</p>
+                    </div>
+                    <div class="fot-cont-inf-redes">
+                        <a href="https://www.facebook.com/GCBA/" target="blank">
+                            <i class="iconify" id="face" data-icon="gg:facebook"
+                               style="color: white; width: 25px;height: 25px;"></i>
+                        </a>
+                        <a href="https://twitter.com/gcba" target="blank">
+                            <i class="iconify" data-icon="line-md:twitter-x-alt"
+                               style="color: white;width: 25px;height: 25px;"></i>
+                        </a>
+                        <a href="https://www.instagram.com/buenosaires/" target="blank">
+                            <i class="iconify" data-icon="bi:instagram"
+                               style="color: white;width: 25px;height: 25px;"></i>
+                        </a>
+                        <a href="https://www.youtube.com/user/GCBA" target="blank">
+                            <i class="iconify" data-icon="fa:youtube"
+                               style="color: white;width: 25px;height: 25px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fot-inf">
+            <div class="fot-inf-div-logo">
+                <a href="http://www.buenosaires.gob.ar/" target="blank">
+                    <img th:src="@{/img/ciudad-ba.webp}" class="logofo" alt="Logo Buenos Aires Ciudad">
+                </a>
+                <p>Los contenidos de buenosaires.gob.ar están licenciados bajo Creative Commons Reconocimiento
+                    2.5
+                    Argentina License.</p>
+            </div>
+            <div class="fot-inf-div-contenido-iz">
+                <a href="https://boletinoficial.buenosaires.gob.ar/" target="blank"><span>Boletín
+                            Oficial</span></a>
+                <a href="https://www.buenosaires.gob.ar/innovacion/ciudadinteligente/terminos-y-condiciones"
+                   target="blank"><span>Términos y condiciones</span></a>
+                <a href="https://www.buenosaires.gob.ar/privacidad" target="blank"><span>Política de
+                            Privacidad</span></a>
+                <a href="https://www.buenosaires.gob.ar/oficiosjudiciales" target="blank"><span>Oficios
+                            judiciales</span></a>
+                <form th:action="@{/logout}" method="POST" style="display: none;" id="formDeslogin">
+                    <input type="submit" value="salir" id="salir-form">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

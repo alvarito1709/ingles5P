@@ -1,0 +1,184 @@
+body{
+    background-color: #ffffff   ;
+}
+
+#bannerContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.orangeTitle{
+    color: #E74C3C;
+}
+
+#titleContainer{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+#bannerContainer img{
+    width: 70%;
+    height: calc(100vh - 75px);
+}
+
+.blackLine{
+    background-color: black;
+    width: 15px;
+    height: 120px;
+    margin-right: 5px;
+}
+
+#logSection{
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    margin: 100px auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#infoSection{
+    width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#authSection{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#authSection input{
+    width: 400px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    background-color: rgba(217, 217, 217, 0.20);
+    text-align: center;
+    font-weight: 600;
+}
+
+#authSection button{
+    width: 200px;
+    padding: 8px;
+    margin: 10px auto;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+}
+
+#logSection p{
+    font-weight: 500;
+    padding: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#authSection button:hover{
+    width: 210px;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+
+    #titleContainer{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 30%;
+    }
+
+    #bannerContainer img{
+
+        width: 70%;
+        height: calc(50vh - 75px);
+    }
+
+    .blackLine{
+        background-color: black;
+        width: 8px;
+        height: 70px;
+        margin-right: 5px;
+    }
+
+    #titleContainer h1{
+        font-size: .7rem;
+        justify-self: center;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+    *{
+        font-size: .8rem;
+    }
+
+    #titleContainer{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 30%;
+    }
+
+    #bannerContainer img{
+
+        width: 70%;
+        height: calc(40vh - 75px);
+    }
+
+    .blackLine{
+        background-color: black;
+        width: 7px;
+        height: 50px;
+        margin-right: 5px;
+    }
+
+    #titleContainer h1{
+
+        justify-self: center;
+        align-self: center;
+    }
+
+    #authSection button{
+        width: 100px;
+        padding: 6px;
+        margin: 5px auto;
+        background-color: black;
+        color: whitesmoke;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #authSection button:hover{
+        width: 105px;
+        transition: 0.5s;
+    }
+
+    #logSection{
+        justify-content: space-around;
+    }
+
+}

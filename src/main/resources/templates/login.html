@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}" >
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<th:block th:replace="plantilla :: header"></th:block>
+
+
+<div class="bodyContainer">
+    <div class="loginContainer">
+        <div id="iconContainer">
+            <img th:src="@{/img/user-128.png}" id="userIcon">
+        </div>
+
+        <form  th:action="@{/login}" method="POST">
+
+            <label for="username">DOCUMENTO</label>
+            <input type="text" name="username" id="username" />
+            <br>
+            <label for="password">CONTRASEÑA</label>
+            <input type="password" name="password" id="password" />
+            <br>
+            <input type="submit" value="LOGIN">
+        </form>
+    </div>
+
+</div>
+
+<th:block th:replace="plantilla :: footer-mobile"></th:block>
+<th:block th:replace="plantilla :: footer-web"></th:block>
+
+</body>
+</html>

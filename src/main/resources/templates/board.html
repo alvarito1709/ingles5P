@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inglés para el Trabajo</title>
+
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}" >
+    <link rel="stylesheet" th:href="@{/css/board.css}" >
+    <link rel="stylesheet" th:href="@{/css/test.css}" >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+<th:block th:replace="plantilla :: header"></th:block>
+
+<div id="boardBody">
+    <div id="welcomeContainer">
+        <div id="titleContainer">
+            <span class="blackLine"></span>
+            <h4> <span class="orangeTitle">INGLÉS</span>
+                <br>PARA EL
+                <br>TRABAJO
+            </h4>
+        </div>
+
+        <p>BIENVENIDO <span th:text="${usuario.nombre.toUpperCase()}">NOMBRE</span> </p>
+    </div>
+
+
+    <div id="boardContainer">
+        <div class="cardContainer">
+            <div class="levelContainer">
+            <span class="blackLine"></span>
+            <p>FORMULARIO
+                <br><span class="grayLetters"> DATOS
+                <br> PERSONALES </span></p>
+            </div>
+
+                <label for="prueba">
+                    <input hidden value="personalData" id="prueba">
+                </label>
+                <button class="blackButton" id="formularyButton1" onclick="showPersonalData()">COMPLETAR</button>
+
+            <p id="success1" class="success" style="display: none">¡COMPLETADO CON ÉXITO!</p>
+
+        </div>
+
+        <div class="cardContainer">
+            <div class="levelContainer">
+                <span class="blackLine"></span>
+                <p>TEST
+                    <br><span class="goldenLetters"> NIVEL 1 </span></p>
+            </div>
+
+            <label for="level1">
+                <input hidden value="level1" id="level1">
+            </label>
+            <button class="blackButton" id="formularyButton2" onclick="showLevel1(), initializateTimer()">COMPLETAR</button>
+            <p id="success2" class="success" style="display: none">¡COMPLETADO CON ÉXITO!</p>
+
+        </div>
+
+        <div class="cardContainer">
+            <div class="levelContainer">
+                <span class="blackLine"></span>
+                <p>TEST
+                    <br><span class="purpleLetters"> NIVEL 2</span></p>
+            </div>
+
+            <label for="level2">
+                <input hidden value="level2" id="level2">
+            </label>
+
+            <button class="blackButton" id="formularyButton3" onclick="showLevel2(), initializateTimer()">COMPLETAR</button>
+            <p id="success3" class="success" style="display: none">¡COMPLETADO CON ÉXITO!</p>
+
+        </div>
+
+        <div class="cardContainer">
+            <div class="levelContainer">
+                <span class="blackLine"></span>
+                <p>TEST
+                    <br><span class="greenLetters"> NIVEL 3</span></p>
+            </div>
+
+            <label for="level3">
+                <input hidden value="level3" id="level3">
+            </label>
+
+            <button class="blackButton" id="formularyButton4" onclick="showLevel3(), initializateTimer()">COMPLETAR</button>
+            <p id="success4" class="success" style="display: none">¡COMPLETADO CON ÉXITO!</p>
+
+        </div>
+
+        <div class="cardContainer">
+            <div class="levelContainer">
+                <span class="blackLine"></span>
+                <p>TEST
+                    <br><span class="blueLetters"> NIVEL 4</span></p>
+            </div>
+
+            <label for="level4">
+                <input hidden value="level4" id="level4">
+            </label>
+
+            <button class="blackButton" id="formularyButton5" onclick="showLevel4(), initializateTimer()">COMPLETAR</button>
+            <p id="success5" class="success" style="display: none">¡COMPLETADO CON ÉXITO!</p>
+
+        </div>
+    </div>
+
+    <div id="finishContainer">
+        <div class="cardContainer">
+            <div class="levelContainer">
+                <span class="blackLine"></span>
+                <p>FELICITACIONES, TU NIVEL ALCANZADO ES:<span class="purpleLetters"> NIVEL 2</span> </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="container" style="display: none">
+
+    <!-- CRONOMETRO -->
+
+    <div id="timerContainer" th:fragment="timer">
+        <div id="timer">
+            <h1 id="counterDisplay"><span id="minute"></span>:<span id="second"></span></h1>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR PARA MOSTRAR EL TEST -->
+
+    <div id="testContainer">
+
+           <div id="tester">
+
+           </div>
+    </div>
+
+</div>
+
+
+
+
+<th:block th:replace="plantilla :: footer-mobile"></th:block>
+<th:block th:replace="plantilla :: footer-web"></th:block>
+
+
+<script th:src="@{/javascript/board.js}"></script>
+<script th:src="@{/javascript/testDisplay.js}"></script>
+
+<script th:src="@{/javascript/timer.js}"></script>
+
+<script>
+    // WORKER PARA MANTENER EL CRONOMETRO FUNCIONANDO EN SEGUNDO PLANO
+
+    const worker = new Worker('../javascript/timer.js');
+
+
+        worker.onmessage = function(e) {
+            document.getElementById("second").innerHTML = e.data.second;
+            document.getElementById("minute").innerHTML = e.data.minute;
+            if (e.data.color) {
+                document.getElementById("counterDisplay").style.color = e.data.color;
+            }
+            if (e.data.finished) {
+                // Llama a las funciones para guardar los datos al acabarse el tiempo
+            }
+        };
+
+
+    // FUNCION PARA INICIAR EL TIMER, ENVÍA COMO PARAMETRO 1000 MILISEGUNDOS
+        function initializateTimer(){
+            worker.postMessage(1000);
+        }
+
+
+
+
+</script>
+
+<script>
+
+    //API PARA TRANSICIONES
+    AOS.init();
+</script>
+
+
+</body>
+</html>
