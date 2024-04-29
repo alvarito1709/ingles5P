@@ -4,6 +4,8 @@
     flex-direction: column;
 }
 
+
+
 #timerContainer{
     background-color: #a6a4a4;
     float: right;
@@ -127,6 +129,13 @@
     align-self: center;
 }
 
+.textContainerUseOfEnglish{
+    text-align: justify;
+    align-self: center;
+    width: 600px;
+    margin: 40px 0 40px ;
+}
+
 .marginAuto{
     margin-right: auto;
     margin-left: auto;
@@ -152,11 +161,19 @@
 
 }
 
+.listeningAnswerContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .dragAndDropAnswerContainer{
     width: 80%;
     height: 50px;
     background-color: #8C8383;
-    padding: 5px;
+    padding: 20px;
     border-radius: 5px;
     align-self: center;
     display: flex;
@@ -168,16 +185,30 @@
 }
 
 .dragAndDropAnswerContainer span{
-    padding: 1px;
+    padding: 5px;
     border-radius: 3px;
+    background-color: #655f5f;
     color: whitesmoke;
     height: fit-content;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .questionsReading1DD{
     margin-bottom: 20px;
     font-weight: 500;
+}
+
+.fieldUseOfEnglish{
+    width: fit-content;
+    display: inline;
+    border: none;
+    background-color: #a29a9a;
+    padding: 3px;
+}
+
+.fieldUseOfEnglish label{
+    margin-left: 5px;
 }
 
 /* ESTILOS SOLO PARA EL APARTADO DE LISTENING NIVEL 2 */
@@ -190,5 +221,18 @@
 
 #listening2 .answerContainer{
     align-items: center;
+}
+
+
+.dropZoneReading{
+    background-color: #c5c3c2;
+    width: 60px;
+    height: 20px;
+    border: none;
+}
+
+.questionText{
+    padding: 10px;
+    margin-bottom: 10px;
 }
 

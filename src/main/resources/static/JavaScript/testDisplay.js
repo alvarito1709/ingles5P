@@ -153,41 +153,41 @@ function attachEventListeners(){
 
 
 
+// ESTA FUNCION ERA PARA REEMPLAZAR "____" POR UN INPUT EN LOS PARRAFOS, ESTÁ A MEDIO FUNCIONAR.
+
+//function dropContainer(){
+
+  //  const dropQuestionContainer = document.querySelectorAll(".questionsReading1DD");
+
+    //const dropInput = document.createElement("div")
+
+   // dropInput.classList.add('dropQuestion');
 
 
-function dropContainer(){
+     //   const paragraph = document.getElementsByClassName("questionText");
 
-    const dropQuestionContainer = document.querySelectorAll(".questionsReading1DD");
+       // for (let i = 0; i <paragraph.length; i++){
 
-    const dropInput = document.createElement("div")
+        //   var arr =  paragraph[i].innerHTML.split("_____");
 
-    dropInput.classList.add('dropQuestion');
+          // const span1 = document.createElement('span');
+     //      const span2 = document.createElement('span');
 
+       //    span1.innerHTML = arr[0];
+      //     span2.innerHTML = arr[1];
 
-        const paragraph = document.getElementsByClassName("questionText");
+     //      const newDiv = document.createElement('div');
 
-        for (let i = 0; i <paragraph.length; i++){
+      //     newDiv.classList.add('questionText');
 
-           var arr =  paragraph[i].innerHTML.split("_____");
+      //     newDiv.append(span1);
+       //    newDiv.append(dropInput);
+      //     newDiv.append(span2);
 
-           const span1 = document.createElement('span');
-           const span2 = document.createElement('span');
+      //     dropQuestionContainer[i].replaceChild(newDiv, paragraph[i]);
+     //   }
 
-           span1.innerHTML = arr[0];
-           span2.innerHTML = arr[1];
-
-           const newDiv = document.createElement('div');
-
-           newDiv.classList.add('questionText');
-
-           newDiv.append(span1);
-           newDiv.append(dropInput);
-           newDiv.append(span2);
-
-           dropQuestionContainer[i].replaceChild(newDiv, paragraph[i]);
-        }
-
-}
+//}
 
 
  //   function addDropReading(){

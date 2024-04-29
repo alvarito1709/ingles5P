@@ -40,26 +40,143 @@
 
                     </iframe>
 
-                    <div th:each=" pregunta : ${preguntas}">
 
                         <div class="questionContainer" >
 
-                                    <p class="question" th:text="${pregunta.enunciado}">1- Who walks to work?</p>
+                                    <p class="question">1- Who walks to work?</p>
 
 
 
-                            <div th:dropzone="prueba1" id="dropQuestion1" class="dropQuestion" ></div>
+                            <div id="dropQuestionListening1-1" class="dropQuestion"></div>
 
                         </div>
                         <div class="answerContainer" >
-                            <div th:each=" respuesta : ${respuestas}" th:if="${respuesta.pregunta == pregunta}" id="listeningAnswerContainer" class="listeningAnswerContainer">
-                                <span th:id="${respuesta.id}" id="dragAnswer" draggable="true" class="drag answer" th:text="${respuesta.cuerpoRespuesta}">a.Lena</span>
+                            <div class="listeningAnswerContainer">
+                                <span draggable="true" class="drag answer" th:value="true">a.Lena</span>
+                                <span draggable="true" class="drag answer" th:value="false">b.Paul</span>
+                                <span draggable="true" class="drag answer" th:value="false">c.Holly</span>
                             </div>
 
                         </div>
 
                         <hr>
-                    </div>
+                    <div class="questionContainer" >
+
+                                    <p class="question">2- Who rides a scooter to work?</p>
+
+
+
+                            <div id="dropQuestionListening1-2" class="dropQuestion"></div>
+
+                        </div>
+                        <div class="answerContainer" >
+                            <div class="listeningAnswerContainer">
+                                <span draggable="true" class="drag answer" th:value="false">a.Lena</span>
+                                <span draggable="true" class="drag answer" th:value="true">b.Paul</span>
+                                <span draggable="true" class="drag answer" th:value="false">c.Holly</span>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                    <div class="questionContainer" >
+
+                                    <p class="question">3- Who takes a bus or coach to buy food and visit friends?</p>
+
+
+
+                            <div id="dropQuestionListening1-3" class="dropQuestion"></div>
+
+                        </div>
+                        <div class="answerContainer" >
+                            <div class="listeningAnswerContainer">
+                                <span draggable="true" class="drag answer" th:value="false">a.Lena</span>
+                                <span draggable="true" class="drag answer" th:value="false">b.Paul</span>
+                                <span draggable="true" class="drag answer" th:value="true">c.Holly</span>
+                            </div>
+
+                        </div>
+
+                        <hr>
+                    <div class="questionContainer" >
+
+                                    <p class="question">4- Who cycles to college?</p>
+
+
+
+                            <div id="dropQuestionListening1-4" class="dropQuestion"></div>
+
+                        </div>
+                        <div class="answerContainer" >
+                            <div class="listeningAnswerContainer">
+                                <span draggable="true" class="drag answer" th:value="false">a.Lena</span>
+                                <span draggable="true" class="drag answer" th:value="false">b.Paul</span>
+                                <span draggable="true" class="drag answer" th:value="true">c.Holly</span>
+                            </div>
+
+                        </div>
+
+                        <hr>
+                    <div class="questionContainer" >
+
+                                    <p class="question">5- Who uses the subway to buy food?</p>
+
+
+
+                            <div id="dropQuestionListening1-5" class="dropQuestion"></div>
+
+                        </div>
+                        <div class="answerContainer" >
+                            <div class="listeningAnswerContainer">
+                                <span draggable="true" class="drag answer" th:value="true">a.Lena</span>
+                                <span draggable="true" class="drag answer" th:value="false">b.Paul</span>
+                                <span draggable="true" class="drag answer" th:value="false">c.Holly</span>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                    <div class="questionContainer" >
+
+                                    <p class="question">6- Who hires a car to visit other cities?</p>
+
+
+
+                            <div id="dropQuestionListening1-6" class="dropQuestion"></div>
+
+                        </div>
+                        <div class="answerContainer" >
+                            <div class="listeningAnswerContainer">
+                                <span draggable="true" class="drag answer" th:value="false">a.Lena</span>
+                                <span draggable="true" class="drag answer" th:value="true">b.Paul</span>
+                                <span draggable="true" class="drag answer" th:value="false">c.Holly</span>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                    <div class="questionContainer" >
+
+                                    <p class="question">7- Who takes the train when he goes out at night?</p>
+
+
+
+                            <div id="dropQuestionListening1-7" class="dropQuestion"></div>
+
+                        </div>
+                        <div class="answerContainer" >
+
+                                <span draggable="true" class="drag answer" th:value="false">a.Lena</span>
+                                <span draggable="true" class="drag answer" th:value="true">b.Paul</span>
+                                <span draggable="true" class="drag answer" th:value="false">c.Holly</span>
+
+
+                        </div>
+
+                        <hr>
 
 
                    <div class="buttonContainer"> <button class="submitButton" onclick="submitApartado('listening1')">ENVIAR</button> </div>
@@ -79,8 +196,44 @@
 
                         <div class="textContainer">
 
-                            <p th:text="${apartado.texto}">
-                                texto
+                            <p>
+                                Wearable technology, or “wearables”,
+                                is the name for the type of electronic devices we can wear as accessories,
+                                implanted in our clothing or even in our body. Wearables are hands-free gadgets with microprocessors
+                                and a connection to the internet.
+                                <br>
+                                <br>
+                                Wearables have existed for hundreds of years. Pocket watches,
+                                which later became wristwatches, or glasses were some of the first examples in the history
+                                of wearable technology. People wore them to have a more comfortable life,
+                                and we still do! Glasses help you see, and watches give you helpful information.
+                                But modern wearable devices are more complicated. They are electronic, and
+                                they use the internet to collect, store and send different kinds of information.
+                                <br>
+                                <br>
+
+                                The first popular electronic wearable technology was Fitness trackers,
+                                like ‘Fitbits’, which became popular in the 2010s. They monitor your heart
+                                and movement and help you keep fit. Now, wearable technology helps people
+                                stay healthy in new ways. For example, the ‘iTBra’ is a patch. Women wear
+                                it inside their bras, and it checks for breast cancer. ‘Heartguide’ looks like a
+                                smartwatch, but it can measure blood pressure. It can also track information about a
+                                person’s lifestyle, for example, how much they exercise. Then it shares this information
+                                with a doctor so that the doctor can give better advice. ‘SmartSleep’ is a soft headband.
+                                It helps people to sleep better. It collects information about people’s sleep patterns, gives
+                                advice and makes sounds to help people fall asleep.
+
+                                <br>
+                                <br>
+
+                                However, not all wearables are about health. Some are used
+                                for protection or to find the place you want to go, and some are just
+                                for fun. For example, you can hug someone from miles away with a smart
+                                jacket! You can also buy smart jewellery. These rings and necklaces can change
+                                colour to match clothes or make-up, or they can send the police an alert if
+                                you are in danger. And with a smart hat, you can listen to music and answer calls
+                                without using headphones!
+
                             </p>
 
                         </div>
@@ -89,16 +242,132 @@
                         <p class="question">True or False? Read the following statements and tell if they are true or false. </p>
                     </div>
 
-                    <div class="questionContainer" th:each=" pregunta : ${preguntas}">
+                    <div class="questionContainer" >
 
-                       <div th:if="${pregunta.tipo == 'TOF'}" style="display: flex; flex-direction: column">
-                            <p class="question" th:text="${pregunta.enunciado}">holis</p>
+                       <div style="display: flex; flex-direction: column">
+                            <p class="question">1- Wearables can’t be used as accessories.</p>
 
                             <fieldset class="answerTOF">
-                                <label th:each=" respuesta : ${respuestas}" th:for="${respuesta.id}" th:if="${respuesta.pregunta == pregunta}">
-                                    <input type="radio" th:value="${respuesta.id}" th:name="${pregunta.id}" th:id="${respuesta.id}" th:text="${respuesta.cuerpoRespuesta}">
+                                <label for="trueReading1-1">
+                                    TRUE
+                                    <input type="radio" value="TRUE" id="trueReading1-1">
                                 </label>
+                                <label for="falseReading1-1">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading1-1">
+                                </label>
+                            </fieldset>
 
+                       </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">2- Wearables are connected to the internet.</p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading1-2">
+                                    TRUE
+                                    <input type="radio" value="TRUE" id="trueReading1-2">
+                                </label>
+                                <label for="falseReading1-2">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading1-2">
+                                </label>
+                            </fieldset>
+
+                       </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">3-Wearables is a new concept.</p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading1-3">
+                                    TRUE
+                                    <input type="radio" value="TRUE" id="trueReading1-3">
+                                </label>
+                                <label for="falseReading1-3">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading1-3">
+                                </label>
+                            </fieldset>
+
+                       </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">4- This technology recovers information.</p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading1-4">
+                                    TRUE
+                                    <input type="radio" value="TRUE" id="trueReading1-4">
+                                </label>
+                                <label for="falseReading1-4">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading1-4">
+                                </label>
+                            </fieldset>
+
+                       </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">5- Fitbits don’t track information about your heart rate.</p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading1-5">
+                                    TRUE
+                                    <input type="radio" value="TRUE" id="trueReading1-5">
+                                </label>
+                                <label for="falseReading1-5">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading1-5">
+                                </label>
+                            </fieldset>
+
+                       </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">6- The headband helps you to give advice.</p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading1-6">
+                                    TRUE
+                                    <input type="radio" value="TRUE" id="trueReading1-6">
+                                </label>
+                                <label for="falseReading1-6">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading1-6">
+                                </label>
+                            </fieldset>
+
+                       </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">7- All wearables are connected to health.</p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading1-7">
+                                    TRUE
+                                    <input type="radio" value="TRUE" id="trueReading1-7">
+                                </label>
+                                <label for="falseReading1-7">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading1-7">
+                                </label>
+                            </fieldset>
+
+                       </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">8- The smart hat allows you listen to music.</p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading1-8">
+                                    TRUE
+                                    <input type="radio" value="TRUE" id="trueReading1-8">
+                                </label>
+                                <label for="falseReading1-8">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading1-8">
+                                </label>
                             </fieldset>
 
                        </div>
@@ -107,13 +376,24 @@
                     <div th:fragment="respuestasReading1(${respuestas}, ${preguntas}, ${apartadoUsado})" style="display: flex; flex-direction: column" id="readingDDContainer">
 
                         <div class="dragAndDropAnswerContainer">
-                            <span draggable="true">patch</span>
-                            <span draggable="true">glasses</span>
-                            <span draggable="true">smartwatch</span>
+                            <span draggable="true" id="answerReading1-9">patch</span>
+                            <span draggable="true" id="answerReading1-10">glasses</span>
+                            <span draggable="true" id="answerReading1-11">smartwatch</span>
+                            <span draggable="true" id="answerReading1-12">headband</span>
+                            <span draggable="true" id="answerReading1-13">bra</span>
+                            <span draggable="true" id="answerReading1-14">jacket</span>
+                            <span draggable="true" id="answerReading1-15">make-up</span>
+                            <span draggable="true" id="answerReading1-16"> fitness tracker</span>
+                            <span draggable="true" id="answerReading1-17">ring </span>
+                            <span draggable="true" id="answerReading1-18">hat</span>
                         </div>
 
-                        <div th:each=" pregunta : ${preguntas}" th:if="${pregunta.tipo == 'DD' && pregunta.apartado == apartadoUsado}" class="questionsReading1DD">
-                            <div th:text="${pregunta.enunciado}" class="questionText">1- Adam doesn't want to use headphones for music. He needs a smart _____ .</div>
+                        <div  class="questionsReading1DD">
+                            <div  class="questionText">1- Adam doesn't want to use headphones for music. He needs a smart <input class="dropZoneReading" id="questionReading1-9"> .</div>
+                            <div  class="questionText">2- A kind of wearable technology that is not electronic is <input class="dropZoneReading" id="questionReading1-10"></div>
+                            <div  class="questionText">3- He wears a <input class="dropZoneReading" id="questionReading1-11"> when he goes running. It counts distance and calories.</div>
+                            <div  class="questionText">4- Bob wears a kind of <input class="dropZoneReading" id="questionReading1-12">  that collects information about his blood pressure. </div>
+                            <div  class="questionText">5- Emily can send love to her grandson who lives in Hong Kong using her smart <input class="dropZoneReading" id="questionReading1-13"></div>
                         </div>
 
                     </div>
@@ -131,23 +411,132 @@
                     <h2>USE OF ENGLISH</h2>
 
 
+                    <h3>Read the text and choose the correct answer for each gap.</h3>
 
-                    <h3>Read the text about technology.</h3>
+                    <div class="textContainerUseOfEnglish">
 
-                    <div class="textContainer">
+                        <div >
+                            Hi Tom,
+                            How are you? I
+                            <fieldset class="fieldUseOfEnglish">(
+                            <label for="answerUseOfEnglish1-1">'ve written<input type="radio" value="FALSE" id="answerUseOfEnglish1-1" name="answerUseOfEnglish1"></label>
+                            <label for="answerUseOfEnglish1-2">'m writing<input type="radio" value="TRUE" id="answerUseOfEnglish1-2" name="answerUseOfEnglish1"></label>
+                            <label for="answerUseOfEnglish1-3">write<input type="radio" value="FALSE" id="answerUseOfEnglish1-3" name="answerUseOfEnglish1"></label>
+                            )</fieldset>
+                             to you from Cancun,
+                            a wonderful place on the Caribbean coast of Mexico.
+                            I travelled here with my family six days
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-4">ago <input type="radio" value="TRUE" id="answerUseOfEnglish1-4" name="answerUseOfEnglish2"></label>
+                                <label for="answerUseOfEnglish1-5">last<input type="radio" value="FALSE" id="answerUseOfEnglish1-5" name="answerUseOfEnglish2"></label>
+                                <label for="answerUseOfEnglish1-6">past<input type="radio" value="FALSE" id="answerUseOfEnglish1-6" name="answerUseOfEnglish2"></label>
+                           ) </fieldset>
+                            .We
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-7">arrive<input type="radio" value="FALSE" id="answerUseOfEnglish1-7" name="answerUseOfEnglish3"></label>
+                                <label for="answerUseOfEnglish1-8">arrives<input type="radio" value="FALSE" id="answerUseOfEnglish1-8" name="answerUseOfEnglish3"></label>
+                                <label for="answerUseOfEnglish1-9">arrived<input type="radio" value="TRUE" id="answerUseOfEnglish1-9" name="answerUseOfEnglish3"></label>
+                            )</fieldset>
+                             on Wednesday morning,
+                            and we
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-10">stayed<input type="radio" value="FALSE" id="answerUseOfEnglish1-10" name="answerUseOfEnglish4"></label>
+                                <label for="answerUseOfEnglish1-11">will stay <input type="radio" value="FALSE" id="answerUseOfEnglish1-11" name="answerUseOfEnglish4"></label>
+                                <label for="answerUseOfEnglish1-12">stay<input type="radio" value="TRUE" id="answerUseOfEnglish1-12" name="answerUseOfEnglish4"></label>
+                            )</fieldset>
+                            for one more week.
 
-                        <p th:text="${apartado.texto}">
-                            texto
-                        </p>
+                            We
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-13">are staying<input type="radio" value="FALSE" id="answerUseOfEnglish1-13" name="answerUseOfEnglish5"></label>
+                                <label for="answerUseOfEnglish1-14">stay <input type="radio" value="FALSE" id="answerUseOfEnglish1-14" name="answerUseOfEnglish5"></label>
+                                <label for="answerUseOfEnglish1-15">stayed<input type="radio" value="TRUE" id="answerUseOfEnglish1-15" name="answerUseOfEnglish5"></label>
+                            )</fieldset> in a fantastic hotel on the beach.
+                            The hotel is cheaper than most hotels in Europe,
+                            and the weather
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-16">was<input type="radio" value="FALSE" id="answerUseOfEnglish1-16" name="answerUseOfEnglish6"></label>
+                                <label for="answerUseOfEnglish1-17">are <input type="radio" value="FALSE" id="answerUseOfEnglish1-17" name="answerUseOfEnglish6"></label>
+                                <label for="answerUseOfEnglish1-18">is<input type="radio" value="TRUE" id="answerUseOfEnglish1-18" name="answerUseOfEnglish6"></label>
+                            )</fieldset>
+                            very nice.
+                            <br>
+                            <br>
+                            There aren't
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-19">some<input type="radio" value="FALSE" id="answerUseOfEnglish1-19" name="answerUseOfEnglish7"></label>
+                                <label for="answerUseOfEnglish1-20">many <input type="radio" value="FALSE" id="answerUseOfEnglish1-20" name="answerUseOfEnglish7"></label>
+                                <label for="answerUseOfEnglish1-21">much<input type="radio" value="TRUE" id="answerUseOfEnglish1-21" name="answerUseOfEnglish7"></label>
+                            )</fieldset>
+                             tourists at the moment, because it's the low season, and that is perfect,
+                            because I
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-22">don't<input type="radio" value="FALSE" id="answerUseOfEnglish1-22" name="answerUseOfEnglish8"></label>
+                                <label for="answerUseOfEnglish1-23">like <input type="radio" value="FALSE" id="answerUseOfEnglish1-23" name="answerUseOfEnglish8"></label>
+                                <label for="answerUseOfEnglish1-24">doesn’t like<input type="radio" value="TRUE" id="answerUseOfEnglish1-24" name="answerUseOfEnglish8"></label>
+                            )</fieldset>
+                            tourists.
+                            I like to relax
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-25">quiet<input type="radio" value="FALSE" id="answerUseOfEnglish1-25" name="answerUseOfEnglish9"></label>
+                                <label for="answerUseOfEnglish1-26">quietly <input type="radio" value="FALSE" id="answerUseOfEnglish1-26" name="answerUseOfEnglish9"></label>
+                                <label for="answerUseOfEnglish1-27">quieter<input type="radio" value="TRUE" id="answerUseOfEnglish1-27" name="answerUseOfEnglish9"></label>
+                            )</fieldset>
+                            on the beach. Yesterday we rented a car and
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-28">drive<input type="radio" value="FALSE" id="answerUseOfEnglish1-28" name="answerUseOfEnglish10"></label>
+                                <label for="answerUseOfEnglish1-29">drove <input type="radio" value="FALSE" id="answerUseOfEnglish1-29" name="answerUseOfEnglish10"></label>
+                                <label for="answerUseOfEnglish1-30">were drive<input type="radio" value="TRUE" id="answerUseOfEnglish1-30" name="answerUseOfEnglish10"></label>
+                            )</fieldset>
+                            to different spots along the coast.
+                            I
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-31">seed<input type="radio" value="FALSE" id="answerUseOfEnglish1-31" name="answerUseOfEnglish11"></label>
+                                <label for="answerUseOfEnglish1-32">saw <input type="radio" value="FALSE" id="answerUseOfEnglish1-32" name="answerUseOfEnglish11"></label>
+                                <label for="answerUseOfEnglish1-33">seen<input type="radio" value="TRUE" id="answerUseOfEnglish1-33" name="answerUseOfEnglish11"></label>
+                            )</fieldset>
+                            some of the most amazing views in Mexico.
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-34">The next<input type="radio" value="FALSE" id="answerUseOfEnglish1-34" name="answerUseOfEnglish12"></label>
+                                <label for="answerUseOfEnglish1-35">Next <input type="radio" value="FALSE" id="answerUseOfEnglish1-35" name="answerUseOfEnglish12"></label>
+                                <label for="answerUseOfEnglish1-36">On the next<input type="radio" value="TRUE" id="answerUseOfEnglish1-36" name="answerUseOfEnglish12"></label>
+                            )</fieldset>
+                             Saturday we're going to buy some souvenirs and finally
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-37">in<input type="radio" value="FALSE" id="answerUseOfEnglish1-37" name="answerUseOfEnglish13"></label>
+                                <label for="answerUseOfEnglish1-38">on <input type="radio" value="FALSE" id="answerUseOfEnglish1-38" name="answerUseOfEnglish13"></label>
+                                <label for="answerUseOfEnglish1-39">at<input type="radio" value="TRUE" id="answerUseOfEnglish1-39" name="answerUseOfEnglish13"></label>
+                            )</fieldset>
+                            Sunday we're coming back home.
+                            <br>
+                            <br>
+                            I'll tell you everything when I come back.
+                            Would you like to have dinner with
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-40">I<input type="radio" value="FALSE" id="answerUseOfEnglish1-40" name="answerUseOfEnglish14"></label>
+                                <label for="answerUseOfEnglish1-41">me <input type="radio" value="FALSE" id="answerUseOfEnglish1-41" name="answerUseOfEnglish14"></label>
+                                <label for="answerUseOfEnglish1-42">my<input type="radio" value="TRUE" id="answerUseOfEnglish1-42" name="answerUseOfEnglish14"></label>
+                            )</fieldset>
+                            one day? I want to thank you for taking care of my cat. I hope you aren't having any problems.
+                            She
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-43">can to be<input type="radio" value="FALSE" id="answerUseOfEnglish1-43" name="answerUseOfEnglish15"></label>
+                                <label for="answerUseOfEnglish1-44">can have <input type="radio" value="FALSE" id="answerUseOfEnglish1-44" name="answerUseOfEnglish15"></label>
+                                <label for="answerUseOfEnglish1-45">can be<input type="radio" value="TRUE" id="answerUseOfEnglish1-45" name="answerUseOfEnglish15"></label>
+                            )</fieldset>
+                             a bit annoying sometimes.
 
-                    </div>
+                            <br>
+                            <br>
 
-                    <div class="questionContainer">
-                        <p class="question">True or False? Read the following statements and tell if they are true or false. </p>
-                    </div>
+                            Bye for now!
 
-                    <div class="questionContainer" th:each=" pregunta : ${preguntas}">
-                        <p class="question" th:text="${pregunta.enunciado}">holis</p>
+                            <br>
+                            <br>
+
+                            Sue.
+
+                        </div>
 
                     </div>
 
@@ -163,34 +552,151 @@
                 <!-- LISTENING NIVEL 2 -->
                 <div id="listening2" th:if="${apartado.nombreApartado == 'LISTENING'}">
 
-                    <iframe width="560" height="315" th:src="${apartado.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/X6UPrGMWQHY?si=R37EkcyOrFae4GFJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
                     </iframe>
 
 
-                    <div th:each=" pregunta : ${preguntas}">
-
-                        <div th:if="${pregunta.tipo == 'DD'}">
-
                             <div class="questionContainer" >
 
-                                <p class="question" th:text="${pregunta.enunciado}">1- Who walks to work?</p>
+                                <p class="question" >1- Who walks to work?</p>
 
 
 
-                                <div th:dropzone="prueba1" id="dropQuestion1" class="dropQuestion"></div>
+                                <div th:dropzone="prueba1" id="dropQuestion2-1" class="dropQuestion"></div>
 
                             </div>
                             <div class="answerContainer" >
-                                <div th:each=" respuesta : ${respuestas}" th:if="${respuesta.pregunta == pregunta}" class="listeningAnswerContainer">
-                                    <span th:id="${respuesta.id}" id="dragAnswer" draggable="true" class="drag answer" th:text="${respuesta.cuerpoRespuesta}">a.Lena</span>
+                                <div class="listeningAnswerContainer">
+                                    <span id="dragAnswer2-1" draggable="true" class="drag answer" th:value="TRUE">a.Kevin</span>
+                                    <span id="dragAnswer2-2" draggable="true" class="drag answer"  th:value="FALSE">b.Samantha</span>
+                                    <span id="dragAnswer2-3" draggable="true" class="drag answer"  th:value="FALSE">c.Both Kevin and Samantha</span>
+                                    <span id="dragAnswer2-4" draggable="true" class="drag answer"  th:value="FALSE">d.Neither Kevin nor Samantha</span>
                                 </div>
                             </div>
 
                             <hr>
-                        </div>
+
+                    <div class="questionContainer" >
+
+                        <p class="question" >2- Who moved to London after a relationship ended?</p>
+
+
+
+                        <div th:dropzone="prueba1" id="dropQuestion2-2" class="dropQuestion"></div>
 
                     </div>
+                    <div class="answerContainer" >
+                        <div class="listeningAnswerContainer">
+                            <span id="dragAnswer2-5" draggable="true" class="drag answer" th:value="FALSE">a.Kevin</span>
+                            <span id="dragAnswer2-6" draggable="true" class="drag answer"  th:value="TRUE">b.Samantha</span>
+                            <span id="dragAnswer2-7" draggable="true" class="drag answer"  th:value="FALSE">c.Both Kevin and Samantha</span>
+                            <span id="dragAnswer2-8" draggable="true" class="drag answer"  th:value="FALSE">d.Neither Kevin nor Samantha</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="questionContainer" >
+
+                        <p class="question" >3- Who has a relative in London?</p>
+
+
+
+                        <div th:dropzone="prueba1" id="dropQuestion2-3" class="dropQuestion"></div>
+
+                    </div>
+                    <div class="answerContainer" >
+                        <div class="listeningAnswerContainer">
+                            <span id="dragAnswer2-9" draggable="true" class="drag answer" th:value="FALSE">a.Kevin</span>
+                            <span id="dragAnswer2-10" draggable="true" class="drag answer"  th:value="TRUE">b.Samantha</span>
+                            <span id="dragAnswer2-11" draggable="true" class="drag answer"  th:value="FALSE">c.Both Kevin and Samantha</span>
+                            <span id="dragAnswer2-12" draggable="true" class="drag answer"  th:value="FALSE">d.Neither Kevin nor Samantha</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="questionContainer" >
+
+                        <p class="question" >4- Who came to London because they were offered a good job?</p>
+
+
+
+                        <div th:dropzone="prueba1" id="dropQuestion2-4" class="dropQuestion"></div>
+
+                    </div>
+                    <div class="answerContainer" >
+                        <div class="listeningAnswerContainer">
+                            <span id="dragAnswer2-13" draggable="true" class="drag answer" th:value="FALSE">a.Kevin</span>
+                            <span id="dragAnswer2-14" draggable="true" class="drag answer"  th:value="FALSE">b.Samantha</span>
+                            <span id="dragAnswer2-15" draggable="true" class="drag answer"  th:value="FALSE">c.Both Kevin and Samantha</span>
+                            <span id="dragAnswer2-16" draggable="true" class="drag answer"  th:value="TRUE">d.Neither Kevin nor Samantha</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="questionContainer" >
+
+                        <p class="question" >5- Who likes London’s international culture?</p>
+
+
+
+                        <div th:dropzone="prueba1" id="dropQuestion2-5" class="dropQuestion"></div>
+
+                    </div>
+                    <div class="answerContainer" >
+                        <div class="listeningAnswerContainer">
+                            <span id="dragAnswer2-17" draggable="true" class="drag answer" th:value="FALSE">a.Kevin</span>
+                            <span id="dragAnswer2-18" draggable="true" class="drag answer"  th:value="FALSE">b.Samantha</span>
+                            <span id="dragAnswer2-19" draggable="true" class="drag answer"  th:value="TRUE">c.Both Kevin and Samantha</span>
+                            <span id="dragAnswer2-20" draggable="true" class="drag answer"  th:value="FALSE">d.Neither Kevin nor Samantha</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="questionContainer" >
+
+                        <p class="question" >6- Who finds London expensive?</p>
+
+
+
+                        <div th:dropzone="prueba1" id="dropQuestion2-6" class="dropQuestion"></div>
+
+                    </div>
+                    <div class="answerContainer" >
+                        <div class="listeningAnswerContainer">
+                            <span id="dragAnswer2-21" draggable="true" class="drag answer" th:value="FALSE">a.Kevin</span>
+                            <span id="dragAnswer2-22" draggable="true" class="drag answer"  th:value="TRUE">b.Samantha</span>
+                            <span id="dragAnswer2-23" draggable="true" class="drag answer"  th:value="FALSE">c.Both Kevin and Samantha</span>
+                            <span id="dragAnswer2-24" draggable="true" class="drag answer"  th:value="FALSE">d.Neither Kevin nor Samantha</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="questionContainer" >
+
+                        <p class="question" >7-Who has experienced problems with crime in London?</p>
+
+
+
+                        <div th:dropzone="prueba1" id="dropQuestion2-7" class="dropQuestion"></div>
+
+                    </div>
+                    <div class="answerContainer" >
+                        <div class="listeningAnswerContainer">
+                            <span id="dragAnswer2-25" draggable="true" class="drag answer" th:value="FALSE">a.Kevin</span>
+                            <span id="dragAnswer2-26" draggable="true" class="drag answer"  th:value="FALSE">b.Samantha</span>
+                            <span id="dragAnswer2-27" draggable="true" class="drag answer"  th:value="FALSE">c.Both Kevin and Samantha</span>
+                            <span id="dragAnswer2-28" draggable="true" class="drag answer"  th:value="TRUE">d.Neither Kevin nor Samantha</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
 
 
                     <div class="buttonContainer"> <button class="submitButton" onclick="submitApartado('listening2')">ENVIAR</button> </div>
@@ -211,48 +717,244 @@
 
                     <div class="textContainer marginAuto">
 
-                        <p th:text="${apartado.texto}">
-                            texto
+                        <p>
+                            The day after Thanksgiving has become America’s biggest shopping day.
+                            Closed all day on Thursday, shopping centres all across the nation open early on Friday.
+                            Some of them open at 12:01 Friday morning, while others open at 4 a.m. Some “sleepyhead“ shopping centres,
+                            like Target this year, don’t open their doors on Friday until 6 a.m.
+                            From Friday to the day before Christmas, this is the season when businesses make nearly 25 per cent of what they earn in a year.
+                            This season puts many businesses “in the black”, that is, they make the money they need for the year.
+
+                            <br>
+                            <br>
+
+                            Reporters from local TV stations interview people who sleep in tents in front of the shops a day or two before the doors open on Friday.
+                            These people patiently wait in a queue to get products that are 50 per cent cheaper or more.
+
+                            <br>
+                            <br>
+                            “Oh, we have fun,” said one of the persons queuing.
+                            “We sometimes bring games to play, we watch TV and order lots of pizza, and we often meet interesting people.
+                            And, most important of all, we save a lot!” The problem, of course, is that only a very small number of products have big reductions in their prices.
+                            Apart from a few big discounts, each shop has other things that are reduced from 10 to 50 per cent,
+                            saving shoppers from $10 to $400 per item, and so Americans want to go shopping.
+
+                            <br>
+                            <br>
+
+                            Not all Americans enjoy shopping.
+                            Reverend William Graham wants to change Black Friday’s name.
+                            “We want to call it Remember Jesus Friday. People should start the season with the right attitude.
+                            Christmas has become a Season of Shopping. We want to make it a Season of Giving.
+                            And we don’t mean giving material things. We mean giving your back, your mind, and your hands.
+                            Help an old lady clean up her house. Teach a kid how to read.
+                            Visit sick people in the hospital or in nursing homes. Give food to the Red Cross.
+                            Celebrate Christmas by remembering Jesus and forgetting Santa Claus.”
+
                         </p>
 
                     </div>
+
+                    <!-- TRUE OR FALSE READING COMP. NIVEL 2 -->
+
+                    <!-- HAY QUE MODIFICAR LOS VALORES DE CADA INPUT SEGUN LA LOGICA DE VALIDACION QUE SE HAGA -->
 
                     <div class="questionContainer">
                         <p class="question">True or False? Read the following statements and tell if they are true or false. </p>
                     </div>
 
-                    <div class="questionContainer"  th:each=" pregunta : ${preguntas}" th:if="${pregunta.tipo == 'TOF'}">
-                        <p class="question" th:text="${pregunta.enunciado}">ENUNCIADO</p>
+                    <div class="questionContainer"  >
+                        <p class="question">1- Black Friday occurs just before Thanksgiving Day.</p>
 
                         <fieldset class="answerTOF">
-                            <label th:each=" respuesta : ${respuestas}" th:for="${respuesta.id}" th:if="${respuesta.pregunta == pregunta}">
-                                <input type="radio" th:value="${respuesta.id}" th:name="${pregunta.id}" th:id="${respuesta.id}" th:text="${respuesta.cuerpoRespuesta}">
+                            <label> TRUE
+                                <input type="radio" value="TRUE" name="readingAnswer2-1">
+                            </label>
+
+                            <label> FALSE
+                                <input type="radio" value="FALSE" name="readingAnswer2-1">
                             </label>
                         </fieldset>
                     </div>
 
-                    <div class="questionContainer" th:each="pregunta : ${preguntas}" th:if="${pregunta.tipo == 'MC'}">
+                    <div class="questionContainer"  >
+                        <p class="question">2- All the shops open on Friday at twelve O’clock. </p>
 
-                        <p class="question" th:text="${pregunta.enunciado}">ENUNCIADO</p>
+                        <fieldset class="answerTOF">
+                            <label> TRUE
+                                <input type="radio" value="TRUE" name="readingAnswer2-2">
+                            </label>
+
+                            <label> FALSE
+                                <input type="radio" value="FALSE" name="readingAnswer2-2">
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div class="questionContainer"  >
+                        <p class="question">3- During this period (from Black Friday till Christmas)
+                            some companies recover and they do not owe anyone any money. </p>
+
+                        <fieldset class="answerTOF">
+                            <label> TRUE
+                                <input type="radio" value="TRUE" name="readingAnswer2-3">
+                            </label>
+
+                            <label> FALSE
+                                <input type="radio" value="FALSE" name="readingAnswer2-3">
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div class="questionContainer"  >
+                        <p class="question">4- People wait in lines to get very cheap products.</p>
+
+                        <fieldset class="answerTOF">
+                            <label> TRUE
+                                <input type="radio" value="TRUE" name="readingAnswer2-4">
+                            </label>
+
+                            <label> FALSE
+                                <input type="radio" value="FALSE" name="readingAnswer2-4">
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div class="questionContainer"  >
+                        <p class="question">5- People get bored when they are waiting.</p>
+
+                        <fieldset class="answerTOF">
+                            <label> TRUE
+                                <input type="radio" value="TRUE" name="readingAnswer2-5">
+                            </label>
+
+                            <label> FALSE
+                                <input type="radio" value="FALSE" name="readingAnswer2-5">
+                            </label>
+                        </fieldset>
+                    </div>
+
+
+                    <!-- MULTIPLE CHOICE READING NIVEL 2 -->
+                    <div class="questionContainer">
+
+                        <p class="question">
+                            1- According to the text, the expression “sleepyhead” refers to shops that..
+                        </p>
 
                         <fieldset class="answerMC">
                             <div class="labelContainer">
-                                <label for="RC2q2a1">a.Kevin
-                                    <input type="radio" value="Kevin" name="question1" id="RC2q2a1">
+                                <label for="readingAnswer2-6">a.open later than others
+                                    <input type="radio" value="TRUE" name="readingQuestion2-1" id="readingAnswer2-6">
                                 </label>
 
-                                <label for="RC2q2a2">b.Samantha
-                                    <input type="radio" value="Samantha" name="question1" id="RC2q2a2">
+                                <label for="readingAnswer2-7">b.open early in the morning
+                                    <input type="radio" value="FALSE" name="readingQuestion2-1" id="readingAnswer2-7">
+                                </label>
+
+                                <label for="readingAnswer2-8">c.don’t open until late in the morning
+                                    <input type="radio" value="FALSE" name="readingQuestion2-1" id="readingAnswer2-8">
                                 </label>
                             </div>
 
+                        </fieldset>
+
+                    </div>
+
+                    <div class="questionContainer">
+
+                        <p class="question">
+                            2- On these days some businesses make ... for the rest of the year.
+                        </p>
+
+                        <fieldset class="answerMC">
                             <div class="labelContainer">
-                                <label for="RC2q2a3">c.Both Kevin and Samantha
-                                    <input type="radio" value="Both Kevin and Samantha" name="question1" id="RC2q2a3">
+                                <label for="readingAnswer2-9">a.half the money
+                                    <input type="radio" value="FALSE" name="readingQuestion2-2" id="readingAnswer2-9">
                                 </label>
 
-                                <label for="RC2q2a4">d.Neither Kevin nor Samantha
-                                    <input type="radio" value="Neither Kevin nor Samantha" name="question1" id="RC2q2a4">
+                                <label for="readingAnswer2-10">b.enough money
+                                    <input type="radio" value="TRUE" name="readingQuestion2-2" id="readingAnswer2-10">
+                                </label>
+
+                                <label for="readingAnswer2-11">c.nearly all the sales
+                                    <input type="radio" value="FALSE" name="readingQuestion2-2" id="readingAnswer2-11">
+                                </label>
+                            </div>
+
+                        </fieldset>
+
+                    </div>
+
+                    <div class="questionContainer">
+
+                        <p class="question">
+                            3- Which of these sentences is TRUE?
+                        </p>
+
+                        <fieldset class="answerMC">
+                            <div class="labelContainer">
+                                <label for="readingAnswer2-12">a.Most products are reduced nearly half price
+                                    <input type="radio" value="FALSE" name="readingQuestion2-3" id="readingAnswer2-12">
+                                </label>
+
+                                <label for="readingAnswer2-13">b.In general, most discounts in prices are quite big
+                                    <input type="radio" value="FALSE" name="readingQuestion2-3" id="readingAnswer2-13">
+                                </label>
+
+                                <label for="readingAnswer2-14">c. Just a few selected products have large discounts
+                                    <input type="radio" value="TRUE" name="readingQuestion2-3" id="readingAnswer2-14">
+                                </label>
+                            </div>
+
+                        </fieldset>
+
+                    </div>
+
+
+                    <div class="questionContainer">
+
+                        <p class="question">
+                            4- Reverend William Graham thinks shopping so much at this time of the year ...
+                        </p>
+
+                        <fieldset class="answerMC">
+                            <div class="labelContainer">
+                                <label for="readingAnswer2-15">a.is not right
+                                    <input type="radio" value="TRUE" name="readingQuestion2-4" id="readingAnswer2-15">
+                                </label>
+
+                                <label for="readingAnswer2-16">b.is the right attitude
+                                    <input type="radio" value="FALSE" name="readingQuestion2-4" id="readingAnswer2-16">
+                                </label>
+
+                                <label for="readingAnswer2-17">c. needs a new name
+                                    <input type="radio" value="FALSE" name="readingQuestion2-4" id="readingAnswer2-17">
+                                </label>
+                            </div>
+
+                        </fieldset>
+
+                    </div>
+
+                    <div class="questionContainer">
+
+                        <p class="question">
+                            5- According to the text, Black Friday is ...
+                        </p>
+
+                        <fieldset class="answerMC">
+                            <div class="labelContainer">
+                                <label for="readingAnswer2-18">a.the Friday before Christmas
+                                    <input type="radio" value="FALSE" name="readingQuestion2-5" id="readingAnswer2-18">
+                                </label>
+
+                                <label for="readingAnswer2-19">b.the beginning of a shopping period
+                                    <input type="radio" value="TRUE" name="readingQuestion2-5" id="readingAnswer2-19">
+                                </label>
+
+                                <label for="readingAnswer2-20">c. an important holiday in The United States
+                                    <input type="radio" value="FALSE" name="readingQuestion2-5" id="readingAnswer2-20">
                                 </label>
                             </div>
 
@@ -263,6 +965,149 @@
 
 
                     <div class="buttonContainer"> <button class="submitButton" onclick="submitApartado('reading2')">ENVIAR</button> </div>
+
+                </div>
+
+
+
+                <!-- FALTA HACER EL USE OF ENGLISH NIVEL 2, ESTÁ COPIADO DEL NIVEL 1 -->
+                <div id="useOfEnglish1" th:if="${apartado.nombreApartado == 'ENGLISH'}">
+
+                    <h2>USE OF ENGLISH</h2>
+
+
+                    <h3>Read the text and choose the correct answer for each gap.</h3>
+
+                    <div class="textContainerUseOfEnglish">
+
+                        <div >
+                            Hi Tom,
+                            How are you? I
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-1">'ve written<input type="radio" value="FALSE" id="answerUseOfEnglish1-1" name="answerUseOfEnglish1"></label>
+                                <label for="answerUseOfEnglish1-2">'m writing<input type="radio" value="TRUE" id="answerUseOfEnglish1-2" name="answerUseOfEnglish1"></label>
+                                <label for="answerUseOfEnglish1-3">write<input type="radio" value="FALSE" id="answerUseOfEnglish1-3" name="answerUseOfEnglish1"></label>
+                                )</fieldset>
+                            to you from Cancun,
+                            a wonderful place on the Caribbean coast of Mexico.
+                            I travelled here with my family six days
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-4">ago <input type="radio" value="TRUE" id="answerUseOfEnglish1-4" name="answerUseOfEnglish2"></label>
+                                <label for="answerUseOfEnglish1-5">last<input type="radio" value="FALSE" id="answerUseOfEnglish1-5" name="answerUseOfEnglish2"></label>
+                                <label for="answerUseOfEnglish1-6">past<input type="radio" value="FALSE" id="answerUseOfEnglish1-6" name="answerUseOfEnglish2"></label>
+                                ) </fieldset>
+                            .We
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-7">arrive<input type="radio" value="FALSE" id="answerUseOfEnglish1-7" name="answerUseOfEnglish3"></label>
+                                <label for="answerUseOfEnglish1-8">arrives<input type="radio" value="FALSE" id="answerUseOfEnglish1-8" name="answerUseOfEnglish3"></label>
+                                <label for="answerUseOfEnglish1-9">arrived<input type="radio" value="TRUE" id="answerUseOfEnglish1-9" name="answerUseOfEnglish3"></label>
+                                )</fieldset>
+                            on Wednesday morning,
+                            and we
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-10">stayed<input type="radio" value="FALSE" id="answerUseOfEnglish1-10" name="answerUseOfEnglish4"></label>
+                                <label for="answerUseOfEnglish1-11">will stay <input type="radio" value="FALSE" id="answerUseOfEnglish1-11" name="answerUseOfEnglish4"></label>
+                                <label for="answerUseOfEnglish1-12">stay<input type="radio" value="TRUE" id="answerUseOfEnglish1-12" name="answerUseOfEnglish4"></label>
+                                )</fieldset>
+                            for one more week.
+
+                            We
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-13">are staying<input type="radio" value="FALSE" id="answerUseOfEnglish1-13" name="answerUseOfEnglish5"></label>
+                                <label for="answerUseOfEnglish1-14">stay <input type="radio" value="FALSE" id="answerUseOfEnglish1-14" name="answerUseOfEnglish5"></label>
+                                <label for="answerUseOfEnglish1-15">stayed<input type="radio" value="TRUE" id="answerUseOfEnglish1-15" name="answerUseOfEnglish5"></label>
+                                )</fieldset> in a fantastic hotel on the beach.
+                            The hotel is cheaper than most hotels in Europe,
+                            and the weather
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-16">was<input type="radio" value="FALSE" id="answerUseOfEnglish1-16" name="answerUseOfEnglish6"></label>
+                                <label for="answerUseOfEnglish1-17">are <input type="radio" value="FALSE" id="answerUseOfEnglish1-17" name="answerUseOfEnglish6"></label>
+                                <label for="answerUseOfEnglish1-18">is<input type="radio" value="TRUE" id="answerUseOfEnglish1-18" name="answerUseOfEnglish6"></label>
+                                )</fieldset>
+                            very nice.
+                            <br>
+                            <br>
+                            There aren't
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-19">some<input type="radio" value="FALSE" id="answerUseOfEnglish1-19" name="answerUseOfEnglish7"></label>
+                                <label for="answerUseOfEnglish1-20">many <input type="radio" value="FALSE" id="answerUseOfEnglish1-20" name="answerUseOfEnglish7"></label>
+                                <label for="answerUseOfEnglish1-21">much<input type="radio" value="TRUE" id="answerUseOfEnglish1-21" name="answerUseOfEnglish7"></label>
+                                )</fieldset>
+                            tourists at the moment, because it's the low season, and that is perfect,
+                            because I
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-22">don't<input type="radio" value="FALSE" id="answerUseOfEnglish1-22" name="answerUseOfEnglish8"></label>
+                                <label for="answerUseOfEnglish1-23">like <input type="radio" value="FALSE" id="answerUseOfEnglish1-23" name="answerUseOfEnglish8"></label>
+                                <label for="answerUseOfEnglish1-24">doesn’t like<input type="radio" value="TRUE" id="answerUseOfEnglish1-24" name="answerUseOfEnglish8"></label>
+                                )</fieldset>
+                            tourists.
+                            I like to relax
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-25">quiet<input type="radio" value="FALSE" id="answerUseOfEnglish1-25" name="answerUseOfEnglish9"></label>
+                                <label for="answerUseOfEnglish1-26">quietly <input type="radio" value="FALSE" id="answerUseOfEnglish1-26" name="answerUseOfEnglish9"></label>
+                                <label for="answerUseOfEnglish1-27">quieter<input type="radio" value="TRUE" id="answerUseOfEnglish1-27" name="answerUseOfEnglish9"></label>
+                                )</fieldset>
+                            on the beach. Yesterday we rented a car and
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-28">drive<input type="radio" value="FALSE" id="answerUseOfEnglish1-28" name="answerUseOfEnglish10"></label>
+                                <label for="answerUseOfEnglish1-29">drove <input type="radio" value="FALSE" id="answerUseOfEnglish1-29" name="answerUseOfEnglish10"></label>
+                                <label for="answerUseOfEnglish1-30">were drive<input type="radio" value="TRUE" id="answerUseOfEnglish1-30" name="answerUseOfEnglish10"></label>
+                                )</fieldset>
+                            to different spots along the coast.
+                            I
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-31">seed<input type="radio" value="FALSE" id="answerUseOfEnglish1-31" name="answerUseOfEnglish11"></label>
+                                <label for="answerUseOfEnglish1-32">saw <input type="radio" value="FALSE" id="answerUseOfEnglish1-32" name="answerUseOfEnglish11"></label>
+                                <label for="answerUseOfEnglish1-33">seen<input type="radio" value="TRUE" id="answerUseOfEnglish1-33" name="answerUseOfEnglish11"></label>
+                                )</fieldset>
+                            some of the most amazing views in Mexico.
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-34">The next<input type="radio" value="FALSE" id="answerUseOfEnglish1-34" name="answerUseOfEnglish12"></label>
+                                <label for="answerUseOfEnglish1-35">Next <input type="radio" value="FALSE" id="answerUseOfEnglish1-35" name="answerUseOfEnglish12"></label>
+                                <label for="answerUseOfEnglish1-36">On the next<input type="radio" value="TRUE" id="answerUseOfEnglish1-36" name="answerUseOfEnglish12"></label>
+                                )</fieldset>
+                            Saturday we're going to buy some souvenirs and finally
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-37">in<input type="radio" value="FALSE" id="answerUseOfEnglish1-37" name="answerUseOfEnglish13"></label>
+                                <label for="answerUseOfEnglish1-38">on <input type="radio" value="FALSE" id="answerUseOfEnglish1-38" name="answerUseOfEnglish13"></label>
+                                <label for="answerUseOfEnglish1-39">at<input type="radio" value="TRUE" id="answerUseOfEnglish1-39" name="answerUseOfEnglish13"></label>
+                                )</fieldset>
+                            Sunday we're coming back home.
+                            <br>
+                            <br>
+                            I'll tell you everything when I come back.
+                            Would you like to have dinner with
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-40">I<input type="radio" value="FALSE" id="answerUseOfEnglish1-40" name="answerUseOfEnglish14"></label>
+                                <label for="answerUseOfEnglish1-41">me <input type="radio" value="FALSE" id="answerUseOfEnglish1-41" name="answerUseOfEnglish14"></label>
+                                <label for="answerUseOfEnglish1-42">my<input type="radio" value="TRUE" id="answerUseOfEnglish1-42" name="answerUseOfEnglish14"></label>
+                                )</fieldset>
+                            one day? I want to thank you for taking care of my cat. I hope you aren't having any problems.
+                            She
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish1-43">can to be<input type="radio" value="FALSE" id="answerUseOfEnglish1-43" name="answerUseOfEnglish15"></label>
+                                <label for="answerUseOfEnglish1-44">can have <input type="radio" value="FALSE" id="answerUseOfEnglish1-44" name="answerUseOfEnglish15"></label>
+                                <label for="answerUseOfEnglish1-45">can be<input type="radio" value="TRUE" id="answerUseOfEnglish1-45" name="answerUseOfEnglish15"></label>
+                                )</fieldset>
+                            a bit annoying sometimes.
+
+                            <br>
+                            <br>
+
+                            Bye for now!
+
+                            <br>
+                            <br>
+
+                            Sue.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="buttonContainer"> <button class="submitButton" onclick="submitApartado('useOfEnglish1')">ENVIAR</button> </div>
 
                 </div>
 
