@@ -51,6 +51,12 @@ function submitApartado(data){
             apartado = "ENGLISH";
             level= 3;
             break;
+
+        case "listening4":
+            test = "level4";
+            apartado = "READING";
+            level= 4;
+            break;
     }
 
     $.ajax({

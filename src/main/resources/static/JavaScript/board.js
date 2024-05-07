@@ -117,8 +117,31 @@ function showLevel3(){
 }
 
 function showLevel4(){
-    document.getElementById("success5").style.display = "block";
-    document.getElementById("formularyButton5").style.display = "none";
+    var url = urlBase+'/test/level'
+    const test = document.getElementById("level4").value;
+
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data:{
+            prueba: test,
+            level: 4,
+            apartado: apartado
+        },
+        success: [function (data){
+            $("#tester").html(data);
+        },
+            function (){
+                container.style.display = "flex";
+                body.style.display = "none";
+            }],
+        error: [function () {
+
+        }]
+    })
+
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
 }
 
 
