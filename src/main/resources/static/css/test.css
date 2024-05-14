@@ -130,7 +130,7 @@
 }
 
 .textContainerUseOfEnglish{
-    text-align: justify;
+    text-align: center;
     align-self: center;
     width: 600px;
     margin: 40px 0 40px ;
@@ -205,6 +205,9 @@
     border: none;
     background-color: #a29a9a;
     padding: 3px;
+
+    font-weight: 600;
+    font-size: .8rem;
 }
 
 .fieldUseOfEnglish label{
@@ -235,5 +238,30 @@
     padding: 10px;
     margin-bottom: 10px;
 }
+
+.selectReading{
+    background-color: #c5c3c2;
+    font-size: .7rem;
+    width: 100px;
+    max-width: fit-content;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+.selectReading:before{
+    width: fit-content;
+}
+
+.selectReading option{
+    font-weight: 600;
+    max-width: 600px;
+}
+
+.selectContainer{
+    max-width: 500px;
+    display: inline;
+}
+
 
 

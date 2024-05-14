@@ -1,6 +1,9 @@
 var urlBase = "http://localhost:8080"
 
-
+// In your Javascript (external .js resource or <script> tag)
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
 
 //toma datos necesarios y los usa para filtrar las preguntas y respuestas que se muestran al usuario en cada nivel y apartado
 function submitApartado(data){
@@ -55,6 +58,12 @@ function submitApartado(data){
         case "listening4":
             test = "level4";
             apartado = "READING";
+            level= 4;
+            break;
+
+        case "reading4":
+            test = "level4";
+            apartado = "ENGLISH";
             level= 4;
             break;
     }

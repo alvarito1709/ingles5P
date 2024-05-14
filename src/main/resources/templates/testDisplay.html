@@ -13,6 +13,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
 
@@ -2076,7 +2079,6 @@
 
                 </div>
 
-                <!-- HASTA ACA LLEGASTE, FALTA HACER LOS GAPS Y DRAG AND DROP -->
 
                 <div id="reading4" class="englishUseContainer" th:if="${apartado.nombreApartado == 'READING'}">
 
@@ -2085,7 +2087,7 @@
                     <img th:src="@{/img/logo-de-tiktok.webp}" class="readingImage marginBottom40">
 
 
-                    <h3 class="marginBottom40">Read the text about technology.</h3>
+                    <h3 class="marginBottom40 marginAuto">Read the text about technology.</h3>
 
                     <div class="textContainer">
 
@@ -2093,55 +2095,376 @@
                             TikTok, the popular app that allows users to create and share short videos,
                             is now the most downloaded app in the world.
                             One of the most popular ways users engage with the app is to carry out challenges.
-                            GAP (1). A successful challenge will go viral,
+                            <select class="selectReading" id="readingQuestion4-1" name="readingQuestion4-1">
+                                <option value="FALSE"></option>
+                                <option value="FALSE">a. The bereaved families are suing TikTok for spreading the challenge among impressionable youngsters.</option>
+                                <option value="FALSE">b. They allow users not only to express their creativity through editing and special effects but also to participate and engage with a worldwide community.</option>
+                                <option value="TRUE">c. These encourage people to video themselves doing some kind of activity, such as singing, dancing or acting.</option>
+                                <option value="FALSE">d. The more attention a young person’s stunt might get, the less likely he or she is to consider its potential risks.</option>
+                                <option value="FALSE">e. It added that doing so was not funny and certainly wouldn’t make users famous.</option>
+                                <option value="FALSE">f. No talent is required beyond a little extroversion and commitment.</option>
+                                <option value="FALSE">g. Even so, the parents of the deceased youngsters claim that TikTok’s ‘dangerous’ algorithms are responsible for their children’s deaths</option>
+                            </select>
+
+                            .A successful challenge will go viral,
                             with hundreds of thousands of people around the world taking part.
+
+                            <br>
+                            <br>
+
                             Copying another person’s video is hardly original or creative.
                             Even so, it’s easy to see the appeal, especially among young audiences.
-                            Anyone with a Smartphone can get involved. GAP (2).
-                            Users can just ride the trend to gain popularity.
+                            Anyone with a Smartphone can get involved.
+                            <br>
+                            <select class="selectReading"  id="readingQuestion4-2" name="readingQuestion4-2">
+                                <option value="FALSE"></option>
+                                <option value="FALSE">a. The bereaved families are suing TikTok for spreading the challenge among impressionable youngsters.</option>
+                                <option value="FALSE">b. They allow users not only to express their creativity through editing and special effects but also to participate and engage with a worldwide community.</option>
+                                <option value="FALSE">c. These encourage people to video themselves doing some kind of activity, such as singing, dancing or acting.</option>
+                                <option value="FALSE">d. The more attention a young person’s stunt might get, the less likely he or she is to consider its potential risks.</option>
+                                <option value="FALSE">e. It added that doing so was not funny and certainly wouldn’t make users famous.</option>
+                                <option value="TRUE">f. No talent is required beyond a little extroversion and commitment.</option>
+                                <option value="FALSE">g. Even so, the parents of the deceased youngsters claim that TikTok’s ‘dangerous’ algorithms are responsible for their children’s deaths</option>
+                            </select>
+                            . Users can just ride the trend to gain popularity.
                             As a result, challenges are ideal for people who have a little spare time,
                             enjoy performing and like getting attention. Unsurprisingly,
                             most of those who take part are children, teenagers and young adults.
+
+                            <br>
+                            <br>
+
                             The problem is that these are the very people who are most at
                             risk from performing challenges.
                             This is because the part of the brain that handles rational
                             thought is not fully developed in humans until we are in our mid-20s.
                             Until then, we are less able to make long-term plans and analyse risk.
                             It’s no secret that the young brain values things that provide a sense
-                            of inclusion and popularity. GAP (3).
+                            of inclusion and popularity.
+                            <br>
+                            <select class="selectReading"  id="readingQuestion4-3" name="readingQuestion4-3">
+                                <option value="FALSE"></option>
+                                <option value="FALSE">a. The bereaved families are suing TikTok for spreading the challenge among impressionable youngsters.</option>
+                                <option value="FALSE">b. They allow users not only to express their creativity through editing and special effects but also to participate and engage with a worldwide community.</option>
+                                <option value="FALSE">c. These encourage people to video themselves doing some kind of activity, such as singing, dancing or acting.</option>
+                                <option value="TRUE">d. The more attention a young person’s stunt might get, the less likely he or she is to consider its potential risks.</option>
+                                <option value="FALSE">e. It added that doing so was not funny and certainly wouldn’t make users famous.</option>
+                                <option value="FALSE">f. No talent is required beyond a little extroversion and commitment.</option>
+                                <option value="FALSE">g. Even so, the parents of the deceased youngsters claim that TikTok’s ‘dangerous’ algorithms are responsible for their children’s deaths</option>
+                            </select>
+                            .
                             The Tik Tok challenge trend has had severe consequences.
                             In 2020, the ‘skull-breaker’ challenge,
                             which involves two people kicking a third person’s legs to make them fall over,
                             caused teenagers in both the UK and the US to be badly injured.
                             In response, TikTok stated that it did not allow content that encourages
-                            dangerous challenges that might lead to injury. GAP (4). Any such content
+                            dangerous challenges that might lead to injury.
+                            <br>
+                            <select class="selectReading"  id="readingQuestion4-4" name="readingQuestion4-4">
+                                <option value="FALSE"></option>
+                                <option value="FALSE">a. The bereaved families are suing TikTok for spreading the challenge among impressionable youngsters.</option>
+                                <option value="FALSE">b. They allow users not only to express their creativity through editing and special effects but also to participate and engage with a worldwide community.</option>
+                                <option value="FALSE">c. These encourage people to video themselves doing some kind of activity, such as singing, dancing or acting.</option>
+                                <option value="FALSE">d. The more attention a young person’s stunt might get, the less likely he or she is to consider its potential risks.</option>
+                                <option value="TRUE">e. It added that doing so was not funny and certainly wouldn’t make users famous.</option>
+                                <option value="FALSE">f. No talent is required beyond a little extroversion and commitment.</option>
+                                <option value="FALSE">g. Even so, the parents of the deceased youngsters claim that TikTok’s ‘dangerous’ algorithms are responsible for their children’s deaths</option>
+                            </select>
+                            .
+                            Any such content
                             on its platform would be removed. Users searching for the skull-breaker
                             challenge would only see a warning about its dangers.
+
+                            <br>
+                            <br>
+
                             This reaction was clearly not thorough enough because,
                             in 2021, several fatal incidents occurred resulting from
                             another viral challenge on Tiktok, the ‘blackout’ challenge,
                             which encouraged people to choke themselves until they passed out.
                             Three youngsters died from attempting this challenge in January 2021.
+                            <br>
                             This was followed later in the year by a number of deaths in the USA and UK.
-                            Two of those who died were young girls under the age of ten. GAP (5).
+                            Two of those who died were young girls under the age of ten.
+                            <select class="selectReading"  id="readingQuestion4-5" name="readingQuestion4-5">
+                                <option value="FALSE"></option>
+                                <option value="TRUE">a. The bereaved families are suing TikTok for spreading the challenge among impressionable youngsters.</option>
+                                <option value="FALSE">b. They allow users not only to express their creativity through editing and special effects but also to participate and engage with a worldwide community.</option>
+                                <option value="FALSE">c. These encourage people to video themselves doing some kind of activity, such as singing, dancing or acting.</option>
+                                <option value="FALSE">d. The more attention a young person’s stunt might get, the less likely he or she is to consider its potential risks.</option>
+                                <option value="FALSE">e. It added that doing so was not funny and certainly wouldn’t make users famous.</option>
+                                <option value="FALSE">f. No talent is required beyond a little extroversion and commitment.</option>
+                                <option value="FALSE">g. Even so, the parents of the deceased youngsters claim that TikTok’s ‘dangerous’ algorithms are responsible for their children’s deaths</option>
+                            </select>
+                            .
 
+                            <br>
+                            <br>
 
                             The challenge did not actually originate on TikTok,
                             nor is it the only platform where videos of it have spread.
                             According to a TIME report in 2018, millions of videos of the ‘Pass Out Challenge’
                             were currently on YouTube. However, where and when the viral trend
-                            originated is not known. GAP(6). They say that the videos were intentionally
+                            originated is not known.
+                            <select class="selectReading"  id="readingQuestion4-6" name="readingQuestion4-6">
+                                <option value="FALSE"></option>
+                                <option value="FALSE">a. The bereaved families are suing TikTok for spreading the challenge among impressionable youngsters.</option>
+                                <option value="FALSE">b. They allow users not only to express their creativity through editing and special effects but also to participate and engage with a worldwide community.</option>
+                                <option value="FALSE">c. These encourage people to video themselves doing some kind of activity, such as singing, dancing or acting.</option>
+                                <option value="FALSE">d. The more attention a young person’s stunt might get, the less likely he or she is to consider its potential risks.</option>
+                                <option value="FALSE">e. It added that doing so was not funny and certainly wouldn’t make users famous.</option>
+                                <option value="FALSE">f. No talent is required beyond a little extroversion and commitment.</option>
+                                <option value="TRUE">g. Even so, the parents of the deceased youngsters claim that TikTok’s ‘dangerous’ algorithms are responsible for their children’s deaths</option>
+                            </select>
+                            .
+                            They say that the videos were intentionally
                             and repeatedly pushed onto their children’s feeds, encouraging them to participate.
                             They claim that the company has prioritised corporate
                             profits over the health and safety of its users.
+
+                            <br>
+                            <br>
 
                         </p>
 
                     </div>
 
 
+                    <div class="questionContainer" >
 
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">1.  Both challenges, the ‘skull-breaker’  and the  ‘blackout’ caused people to die.   </p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading4-1">
+                                    TRUE
+                                    <input type="radio" value="FALSE" id="trueReading4-1" name="readingQuestion4-7">
+                                </label>
+                                <label for="falseReading4-1">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading4-1" name="readingQuestion4-7">
+                                </label>
+                            </fieldset>
+
+                        </div>
+
+                    </div>
+
+                    <div class="questionContainer" >
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">2.  According to a TIME report in 2018, ‘Pass Out Challenge’ originated on YouTube.     </p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading4-2">
+                                    TRUE
+                                    <input type="radio" value="FALSE" id="trueReading4-2" name="readingQuestion4-8">
+                                </label>
+                                <label for="falseReading4-2">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading4-2" name="readingQuestion4-8">
+                                </label>
+                            </fieldset>
+
+                        </div>
+
+                    </div>
+
+                    <div class="questionContainer" >
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">3. Parents have sued Tick Tock because they considered the app encouraging children to take part. </p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading4-3">
+                                    TRUE
+                                    <input type="radio" value="FALSE" id="trueReading4-3" name="readingQuestion4-9">
+                                </label>
+                                <label for="falseReading4-3">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading4-3" name="readingQuestion4-9">
+                                </label>
+                            </fieldset>
+
+                        </div>
+
+                    </div>
+
+                    <div class="questionContainer" >
+
+                        <div style="display: flex; flex-direction: column">
+                            <p class="question">4. Most of those who take part are the very people who are most at risk from performing challenges. </p>
+
+                            <fieldset class="answerTOF">
+                                <label for="trueReading4-4">
+                                    TRUE
+                                    <input type="radio" value="FALSE" id="trueReading4-4" name="readingQuestion4-10">
+                                </label>
+                                <label for="falseReading4-4">
+                                    FALSE
+                                    <input type="radio" value="TRUE" id="falseReading4-4" name="readingQuestion4-10">
+                                </label>
+                            </fieldset>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="buttonContainer"> <button class="submitButton" onclick="submitApartado('reading4')">ENVIAR</button> </div>
             </div>
+
+                <!-- USE OF ENGLISH NIVEL 4 -->
+                <div id="useOfEnglish4" th:if="${apartado.nombreApartado == 'ENGLISH'}">
+
+                    <h2>USE OF ENGLISH</h2>
+
+
+                    <h3>Read the text and choose the correct answer for each gap.</h3>
+
+                    <div class="textContainerUseOfEnglish">
+
+                        <div>
+                            I didn’t know
+
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-1"><input type="radio" value="FALSE" id="answerUseOfEnglish4-1" name="answerUseOfEnglish4-1">a-what did ghosting mean</label>
+                                <label for="answerUseOfEnglish4-2"><input type="radio" value="TRUE" id="answerUseOfEnglish4-2" name="answerUseOfEnglish4-1">b- what ghosting was</label>
+                                <label for="answerUseOfEnglish4-3"><input type="radio" value="FALSE" id="answerUseOfEnglish4-3" name="answerUseOfEnglish4-1">c-what was ghosting</label>
+                                )</fieldset>
+
+                            until I told a friend that Sarah
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-4"><input type="radio" value="TRUE" id="answerUseOfEnglish4-4" name="answerUseOfEnglish4-2">a- hadn’t been answering</label>
+                                <label for="answerUseOfEnglish4-5"><input type="radio" value="FALSE" id="answerUseOfEnglish4-5" name="answerUseOfEnglish4-2">b- didn’t answer</label>
+                                <label for="answerUseOfEnglish4-6"><input type="radio" value="FALSE" id="answerUseOfEnglish4-6" name="answerUseOfEnglish4-2">c-wasn’t answering</label>
+                                )</fieldset>
+                            my texts for three days.
+                            It was then that my
+
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-7"><input type="radio" value="FALSE" id="answerUseOfEnglish4-7" name="answerUseOfEnglish4-3">a- big funny old</label>
+                                <label for="answerUseOfEnglish4-8"><input type="radio" value="TRUE" id="answerUseOfEnglish4-8" name="answerUseOfEnglish4-3">b- funny big old</label>
+                                <label for="answerUseOfEnglish4-9"><input type="radio" value="FALSE" id="answerUseOfEnglish4-9" name="answerUseOfEnglish4-3">c-funny old big</label>
+                                )</fieldset>
+                             friend looked at me and yelled,
+                            “You got ghosted!” He had to explain that ghosting is when someone you are dating cuts all contact and disappears from your life.
+                            In other words, it’s when you are dumped by someone without
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-10"><input type="radio" value="FALSE" id="answerUseOfEnglish4-10" name="answerUseOfEnglish4-4">a- giving</label>
+                                <label for="answerUseOfEnglish4-11"><input type="radio" value="FALSE" id="answerUseOfEnglish4-11" name="answerUseOfEnglish4-4">b- having given</label>
+                                <label for="answerUseOfEnglish4-12"><input type="radio" value="TRUE" id="answerUseOfEnglish4-12" name="answerUseOfEnglish4-4">c-being given</label>
+                                )</fieldset>
+
+                            <br>
+                            <br>
+
+                            I had met Sarah through a dating app and
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-13"><input type="radio" value="FALSE" id="answerUseOfEnglish4-13" name="answerUseOfEnglish4-5">a- however</label>
+                                <label for="answerUseOfEnglish4-14"><input type="radio" value="FALSE" id="answerUseOfEnglish4-14" name="answerUseOfEnglish4-5">b- although</label>
+                                <label for="answerUseOfEnglish4-15"><input type="radio" value="TRUE" id="answerUseOfEnglish4-15" name="answerUseOfEnglish4-5">c- despite</label>
+                                )</fieldset>
+                            coming from different backgrounds, we had lots of things in common.
+                            Being with her felt
+
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-16"><input type="radio" value="FALSE" id="answerUseOfEnglish4-16" name="answerUseOfEnglish4-6">a- amazingly</label>
+                                <label for="answerUseOfEnglish4-17"><input type="radio" value="TRUE" id="answerUseOfEnglish4-17" name="answerUseOfEnglish4-6">b- amazing</label>
+                                <label for="answerUseOfEnglish4-18"><input type="radio" value="FALSE" id="answerUseOfEnglish4-18" name="answerUseOfEnglish4-6">c- greatly</label>
+                                )</fieldset>
+
+                            since the beginning.
+                            I felt we had a deep connection and that we
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-19"><input type="radio" value="FALSE" id="answerUseOfEnglish4-19" name="answerUseOfEnglish4-7">a- were destined clearly</label>
+                                <label for="answerUseOfEnglish4-20"><input type="radio" value="FALSE" id="answerUseOfEnglish4-20" name="answerUseOfEnglish4-7">b- clearly were destined </label>
+                                <label for="answerUseOfEnglish4-21"><input type="radio" value="TRUE" id="answerUseOfEnglish4-21" name="answerUseOfEnglish4-7">c- were clearly destined</label>
+                                )</fieldset>
+                            to be together.
+                            After a few dates and a lot of kissing, I was more and more convinced that she was the one.
+                            But then she just vanished; she broke up with me without breaking up with me.
+                            I hated her for that. I thought she at least owed me an explanation. She
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-22"><input type="radio" value="FALSE" id="answerUseOfEnglish4-22" name="answerUseOfEnglish4-8">a- should tell</label>
+                                <label for="answerUseOfEnglish4-23"><input type="radio" value="TRUE" id="answerUseOfEnglish4-23" name="answerUseOfEnglish4-8">b- should have told </label>
+                                <label for="answerUseOfEnglish4-24"><input type="radio" value="FALSE" id="answerUseOfEnglish4-24" name="answerUseOfEnglish4-8">c- should be told</label>
+                                )</fieldset>
+                            me why she had stopped wanting to see me,
+                            or to even speak to me.
+
+                            <br>
+                            <br>
+
+                            I didn't know what I
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-25"><input type="radio" value="TRUE" id="answerUseOfEnglish4-25" name="answerUseOfEnglish4-9">a- had done</label>
+                                <label for="answerUseOfEnglish4-26"><input type="radio" value="FALSE" id="answerUseOfEnglish4-26" name="answerUseOfEnglish4-9">b- did</label>
+                                <label for="answerUseOfEnglish4-27"><input type="radio" value="FALSE" id="answerUseOfEnglish4-27" name="answerUseOfEnglish4-9">c- was doing</label>
+                                )</fieldset>
+                            wrong, and I was consumed by the thought that Sarah
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-28"><input type="radio" value="FALSE" id="answerUseOfEnglish4-28" name="answerUseOfEnglish4-10">a- had never disappeared</label>
+                                <label for="answerUseOfEnglish4-29"><input type="radio" value="FALSE" id="answerUseOfEnglish4-29" name="answerUseOfEnglish4-10">b- would never disappear </label>
+                                <label for="answerUseOfEnglish4-30"><input type="radio" value="TRUE" id="answerUseOfEnglish4-30" name="answerUseOfEnglish4-10">c- might never have disappeared</label>
+                                )</fieldset>
+                            from my life if I had done something differently. But there was no way to know,
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-31"><input type="radio" value="FALSE" id="answerUseOfEnglish4-31" name="answerUseOfEnglish4-11">a- wasn't there</label>
+                                <label for="answerUseOfEnglish4-32"><input type="radio" value="TRUE" id="answerUseOfEnglish4-32" name="answerUseOfEnglish4-11">b- was it? </label>
+                                <label for="answerUseOfEnglish4-33"><input type="radio" value="FALSE" id="answerUseOfEnglish4-33" name="answerUseOfEnglish4-11">c- didn't it?</label>
+                                )</fieldset>
+                            Because she didn't want to take the time to explain herself.
+                            How could anyone do something like that? I lost self-esteem and it was difficult for me to trust the women I dated after Sarah.
+                            Until I met Emily.
+
+                            <br>
+                            <br>
+
+                            Emily was easy to trust. She was
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-34"><input type="radio" value="FALSE" id="answerUseOfEnglish4-34" name="answerUseOfEnglish4-12">a- so</label>
+                                <label for="answerUseOfEnglish4-35"><input type="radio" value="TRUE" id="answerUseOfEnglish4-35" name="answerUseOfEnglish4-12">b- such a </label>
+                                <label for="answerUseOfEnglish4-36"><input type="radio" value="FALSE" id="answerUseOfEnglish4-36" name="answerUseOfEnglish4-12">c- such</label>
+                                )</fieldset>
+                            nice and honest creature that it was almost impossible not to like her.
+                            I really enjoyed
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-37"><input type="radio" value="FALSE" id="answerUseOfEnglish4-37" name="answerUseOfEnglish4-13">a- to spend</label>
+                                <label for="answerUseOfEnglish4-38"><input type="radio" value="TRUE" id="answerUseOfEnglish4-38" name="answerUseOfEnglish4-13">b- spending </label>
+                                <label for="answerUseOfEnglish4-39"><input type="radio" value="FALSE" id="answerUseOfEnglish4-39" name="answerUseOfEnglish4-13">c- spend</label>
+                                )</fieldset>
+                            time with her.
+                            She was sweet and caring, and she made me feel great about myself.
+                            However, she cared more than I did and gradually, I realised that we were not on the same level,
+                            and that I was going to end up hurting her. I needed to stop seeing her, because
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-40"><input type="radio" value="FALSE" id="answerUseOfEnglish4-40" name="answerUseOfEnglish4-14">a- the more long </label>
+                                <label for="answerUseOfEnglish4-41"><input type="radio" value="FALSE" id="answerUseOfEnglish4-41" name="answerUseOfEnglish4-14">b- the longer </label>
+                                <label for="answerUseOfEnglish4-42"><input type="radio" value="TRUE" id="answerUseOfEnglish4-42" name="answerUseOfEnglish4-14">c- as long as</label>
+                                )</fieldset>
+                            I was with her,
+                            the more I would hurt her feelings. And she didn't deserve that,
+                            so I needed to act quickly. I picked up the phone numerous times,
+                            but I couldn't bring myself to break up with her.
+                            Then she texted me a couple of times, but I didn't answer her texts.
+                            And I didn't return any of her calls. I didn't know what to say.
+                            I knew that
+                            <fieldset class="fieldUseOfEnglish">(
+                                <label for="answerUseOfEnglish4-43"><input type="radio" value="TRUE" id="answerUseOfEnglish4-43" name="answerUseOfEnglish4-15">a- whatever </label>
+                                <label for="answerUseOfEnglish4-44"><input type="radio" value="FALSE" id="answerUseOfEnglish4-44" name="answerUseOfEnglish4-15">b- whichever </label>
+                                <label for="answerUseOfEnglish4-45"><input type="radio" value="FALSE" id="answerUseOfEnglish4-45" name="answerUseOfEnglish4-15">c- however</label>
+                                )</fieldset>
+                            I said would hurt her.
+                            So I said nothing. I just ghosted her.
+
+                        </div>
+
+                    </div>
+
+                    <div class="buttonContainer"> <button class="submitButton" onclick="submitApartado('useOfEnglish4')">ENVIAR</button> </div>
+
+                </div>
     </div>
 
 </div>
