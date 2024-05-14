@@ -144,6 +144,34 @@ function showLevel4(){
 
 }
 
+function showLevel(nivel){
+    const url = urlBase+'/test/level'
+
+
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data:{
+            prueba: nivel,
+            level: 4,
+            apartado: apartado
+        },
+        success: [function (data){
+            $("#tester").html(data);
+        },
+            function (){
+                container.style.display = "flex";
+                body.style.display = "none";
+            }],
+        error: [function () {
+
+        }]
+    })
+
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+}
+
 
 
     window.onbeforeunload = function (){

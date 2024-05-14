@@ -43,17 +43,16 @@ public class testController {
     ){
         model.addAttribute("prueba", prueba);
 
-        Apartado apartadoUsado = apartadoRepository.findByApartadoYNivel(apartado, level);
 
-        model.addAttribute("apartadoUsado", apartadoUsado);
+        model.addAttribute("apartadoUsado", apartado);
 
-        List<Pregunta> preguntas = preguntaRepo.findPreguntaByApartadoYNivel(level, apartadoUsado.getId());
+        //List<Pregunta> preguntas = preguntaRepo.findPreguntaByApartadoYNivel(level, apartadoUsado.getId());
 
-        model.addAttribute("preguntas", preguntas);
+        //model.addAttribute("preguntas", preguntas);
 
-        List<Respuesta> respuestas = respuestaRepository.findRespuestaByNivel(level);
+        //List<Respuesta> respuestas = respuestaRepository.findRespuestaByNivel(level);
 
-        model.addAttribute("respuestas" , respuestas);
+       // model.addAttribute("respuestas" , respuestas);
 
 
 

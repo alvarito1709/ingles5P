@@ -30,16 +30,16 @@
     </div>
 
     <div id="testContainer">
-        <div id="test" data-aos="fade-left" data-aos-duration="2000" th:fragment="test (${prueba}, ${preguntas}, ${apartadoUsado}, ${respuestas})" th:each="apartado : ${apartadoUsado}">
+        <div id="test" data-aos="fade-left" data-aos-duration="2000" th:fragment="test (${prueba}, ${preguntas}, ${apartadoUsado}, ${respuestas})">
            <h2 id="personalData" th:if="${prueba == 'personalData'}">PERSONAL DATA</h2>
 
             <div id="level1" th:if="${prueba == 'level1'}" >
 
 
                 <!-- LISTENING NIVEL 1 -->
-                <div id="listening1" th:if="${apartado.nombreApartado == 'LISTENING'}">
+                <div id="listening1" th:if="${apartadoUsado == 'LISTENING'}">
 
-                    <iframe width="560" height="315" th:src="${apartado.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/s8az2Rzook0?si=DIqwgbFhZIpPJnNW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
                     </iframe>
 
@@ -188,7 +188,7 @@
 
                 <!-- READING COMPREHENSION NIVEL1 -->
 
-                <div id="reading1" class="englishUseContainer" th:if="${apartado.nombreApartado == 'READING'}">
+                <div id="reading1" class="englishUseContainer" th:if="${apartadoUsado == 'READING'}">
 
                     <h2 class="marginBottom40">READING COMPREHENSION</h2>
 
@@ -409,7 +409,7 @@
 
                 <!-- USE OF ENGLISH NIVEL 1 -->
 
-                <div id="useOfEnglish1" th:if="${apartado.nombreApartado == 'ENGLISH'}">
+                <div id="useOfEnglish1" th:if="${apartadoUsado == 'ENGLISH'}">
 
                     <h2>USE OF ENGLISH</h2>
 
