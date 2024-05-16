@@ -7,7 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 .main-header {
-    background-color: #ffd84a;
+    background-color: #052759;
     color: black;
     display: flex;
     align-items: center;
@@ -19,8 +19,10 @@
 }
 
 .logo img{
-    width: 200px;
+    width: 100px;
 }
+
+
 
 .user-menu {
     display: flex;
@@ -56,7 +58,7 @@
     position: absolute;
     top: 100%;
     right: 20px; /* Alinear el menú a la derecha con un poco de espacio */
-    background-color: #ffd84a;
+    background-color: #052759;
     width:200px;
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */

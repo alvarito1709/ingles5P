@@ -18,7 +18,7 @@ html{
 
     .footer-mobile {
 
-        background-color: #333;
+        background-color: #021024;
         min-width: 100%;
         min-height: max-content;
         height: fit-content;
@@ -242,7 +242,7 @@ html{
     }
 
     footer {
-        background-color: #333;
+        background-color: #021024;
         display: flex;
         width: 100vw;
         overflow: hidden;

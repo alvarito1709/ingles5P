@@ -1,5 +1,5 @@
 #welcomeContainer{
-    background-color: rgba(217, 217, 217, 0.73);
+    background-color: #7DA0CA;
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -32,6 +32,7 @@
 .grayLetters{
     color: #8C8383;
 }
+
 
 .goldenLetters{
     color: #E78F0C;
@@ -103,4 +104,8 @@ button:hover{
 
 .blueLetters{
     color: #00b3e3;
+}
+
+.deepBlueLetters{
+    color: #052759;
 }
