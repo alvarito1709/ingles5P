@@ -1,9 +1,6 @@
 var urlBase = "http://localhost:8080"
 
-// In your Javascript (external .js resource or <script> tag)
-$(document).ready(function() {
-    $('.js-example-basic-single').select2();
-});
+
 
 //toma datos necesarios y los usa para filtrar las preguntas y respuestas que se muestran al usuario en cada nivel y apartado
 function submitApartado(data){
@@ -98,7 +95,7 @@ const tester = document.getElementById("tester");
     // Utiliza MutationObserver para detectar cambios en el elemento tester de manera más eficiente
     const observer = new MutationObserver(() => {
         attachEventListeners();
-        dropContainer();
+        //dropContainer();
     });
 
     observer.observe(tester, { childList: true });
@@ -131,44 +128,45 @@ function attachEventListeners(){
             questionContainer[i].classList.remove('dropHover');
 
             //recibe la variable del elemento arrastrado mediante un dataTransfer
-            var id = ev.dataTransfer.getData('id');
+            var id = ev.dataTransfer.getData("id");
+            var dropedAnswer = document.getElementById(id);
 
-            console.log(id);
 
             if (id != null) {
-                ev.target.appendChild(document.getElementById(id));
+                if (questionContainer[i].children.length === 1){
+                    let spanHijo = questionContainer[i].children[0];
+
+                    questionContainer[i].replaceChild(dropedAnswer, spanHijo);
+                }
+                ev.target.appendChild(dropedAnswer);
             }
         })
     }
 
 
-    //mapea el HTML collection de answer para agregarles un addEventListener a todos
+    //mapea el HTML collection de answer para agregarles un addEventListener a todos y transferir su id
     for (let i = 0; i < answer.length; i++) {
-        answer[i].addEventListener("dragstart", ev => {
-            //toma el span children del contenedor y lo almacena en una variable html collection
-            var children = answer[i].children;
 
+        let elementos = answer[i].children
+        let x = 0;
 
-            //crea una variable de tipo array para almacenar el id
-            var childrenId = [];
+        while(x < elementos.length){
+            let elemento = elementos[x];
+            let spanId = elementos[x].id;
+            elemento.addEventListener("dragstart", (ev) =>{
+                const transfer = ev.dataTransfer;
+                transfer.setData('id',spanId);
+            })
 
-            //almacena el id en la variable childrenId
-            for (let i = 0; i < children.length; i++) {
-                childrenId.push(children[i].id);
-            }
+            x++;
+        }
 
-            //mapea la variable childrenId y deja el dato Id del elemento hijo como un string
-            var id = childrenId.map(e => parseInt(e)).join("")
-
-            // agrega el id del elemento arrastrado a un dataTransfer para ser recibido por el contenedor destino.
-            ev.dataTransfer.setData('id', id);
-        });
     }
 }
 
 
 
-// ESTA FUNCION ERA PARA REEMPLAZAR "____" POR UN INPUT EN LOS PARRAFOS, ESTÁ A MEDIO FUNCIONAR.
+// ESTA FUNCION ERA PARA REEMPLAZAR EL PATRON "____" POR UN INPUT EN LOS PARRAFOS, ESTÁ A MEDIO FUNCIONAR.
 
 //function dropContainer(){
 
