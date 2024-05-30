@@ -33,7 +33,7 @@
         <div id="test" data-aos="fade-left" data-aos-duration="2000" th:fragment="test (${prueba}, ${preguntas}, ${apartadoUsado}, ${respuestas})">
            <h2 id="personalData" th:if="${prueba == 'personalData'}">PERSONAL DATA</h2>
 
-            <div id="level1" th:if="${prueba == 'level1'}" >
+            <div id="level1" th:if="${prueba == 'level1'}">
 
 
                 <!-- LISTENING NIVEL 1 -->
@@ -55,9 +55,9 @@
                         </div>
                         <div class="answerContainer" >
                             <div class="listeningAnswerContainer">
-                                <span draggable="true" class="drag answer" th:value="true" id="answerlistening1-1">a.Lena</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-2">b.Paul</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-3">c.Holly</span>
+                                <span draggable="true" class="drag answer" data-value="true" id="answerlistening1-1">a.Lena</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-2">b.Paul</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-3">c.Holly</span>
                             </div>
 
                         </div>
@@ -74,9 +74,9 @@
                         </div>
                         <div class="answerContainer" >
                             <div class="listeningAnswerContainer">
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-4">a.Lena</span>
-                                <span draggable="true" class="drag answer" th:value="true" id="answerlistening1-5">b.Paul</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-6">c.Holly</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-4">a.Lena</span>
+                                <span draggable="true" class="drag answer" data-value="true" id="answerlistening1-5">b.Paul</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-6">c.Holly</span>
                             </div>
 
                         </div>
@@ -94,9 +94,9 @@
                         </div>
                         <div class="answerContainer" >
                             <div class="listeningAnswerContainer">
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-7">a.Lena</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-8">b.Paul</span>
-                                <span draggable="true" class="drag answer" th:value="true" id="answerlistening1-9">c.Holly</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-7">a.Lena</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-8">b.Paul</span>
+                                <span draggable="true" class="drag answer" data-value="true" id="answerlistening1-9">c.Holly</span>
                             </div>
 
                         </div>
@@ -113,9 +113,9 @@
                         </div>
                         <div class="answerContainer" >
                             <div class="listeningAnswerContainer">
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-10">a.Lena</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-11">b.Paul</span>
-                                <span draggable="true" class="drag answer" th:value="true" id="answerlistening1-12">c.Holly</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-10">a.Lena</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-11">b.Paul</span>
+                                <span draggable="true" class="drag answer" data-value="true" id="answerlistening1-12">c.Holly</span>
                             </div>
 
                         </div>
@@ -132,9 +132,9 @@
                         </div>
                         <div class="answerContainer" >
                             <div class="listeningAnswerContainer">
-                                <span draggable="true" class="drag answer" th:value="true" id="answerlistening1-13">a.Lena</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-14">b.Paul</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-15">c.Holly</span>
+                                <span draggable="true" class="drag answer" data-value="true" id="answerlistening1-13">a.Lena</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-14">b.Paul</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-15">c.Holly</span>
                             </div>
 
                         </div>
@@ -152,9 +152,9 @@
                         </div>
                         <div class="answerContainer" >
                             <div class="listeningAnswerContainer">
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-16">a.Lena</span>
-                                <span draggable="true" class="drag answer" th:value="true" id="answerlistening1-17">b.Paul</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-18">c.Holly</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-16">a.Lena</span>
+                                <span draggable="true" class="drag answer" data-value="true" id="answerlistening1-17">b.Paul</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-18">c.Holly</span>
                             </div>
 
                         </div>
@@ -173,9 +173,9 @@
                         <div class="answerContainer" >
 
                             <div class="listeningAnswerContainer">
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-19">a.Lena</span>
-                                <span draggable="true" class="drag answer" th:value="true" id="answerlistening1-20">b.Paul</span>
-                                <span draggable="true" class="drag answer" th:value="false" id="answerlistening1-21">c.Holly</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-19">a.Lena</span>
+                                <span draggable="true" class="drag answer" data-value="true" id="answerlistening1-20">b.Paul</span>
+                                <span draggable="true" class="drag answer" data-value="false" id="answerlistening1-21">c.Holly</span>
                             </div>
 
 
@@ -185,7 +185,7 @@
                         <hr>
 
 
-                   <div class="buttonContainer"> <button class="submitButton" onclick="submitApartado('listening1')">ENVIAR</button> </div>
+                   <div class="buttonContainer"> <button class="submitButton" onclick=" submitApartado('listening1')">ENVIAR</button> </div>
 
                 </div>
 
@@ -193,12 +193,12 @@
 
                 <div id="reading1" class="englishUseContainer" th:if="${apartadoUsado == 'READING'}">
 
-                    <h2 class="marginBottom40">READING COMPREHENSION</h2>
+                    <h2 class="marginBottom40 ">READING COMPREHENSION</h2>
 
                     <img th:src="@{/img/READING1.webp}" class="readingImage marginBottom40">
 
 
-                        <h3 class="marginBottom40">Read the text about technology.</h3>
+                        <h3 class="marginBottom40 marginAuto">Read the text about technology.</h3>
 
                         <div class="textContainer">
 
@@ -256,11 +256,11 @@
                             <fieldset class="answerTOF">
                                 <label for="trueReading1-1">
                                     TRUE
-                                    <input type="radio" value="TRUE" id="trueReading1-1">
+                                    <input type="radio" value="TRUE" id="trueReading1-1" name="readingAnswer1-1">
                                 </label>
                                 <label for="falseReading1-1">
                                     FALSE
-                                    <input type="radio" value="TRUE" id="falseReading1-1">
+                                    <input type="radio" value="TRUE" id="falseReading1-1" name="readingAnswer1-1">
                                 </label>
                             </fieldset>
 
@@ -272,11 +272,11 @@
                             <fieldset class="answerTOF">
                                 <label for="trueReading1-2">
                                     TRUE
-                                    <input type="radio" value="TRUE" id="trueReading1-2">
+                                    <input type="radio" value="TRUE" id="trueReading1-2" name="readingAnswer1-2">
                                 </label>
                                 <label for="falseReading1-2">
                                     FALSE
-                                    <input type="radio" value="TRUE" id="falseReading1-2">
+                                    <input type="radio" value="TRUE" id="falseReading1-2" name="readingAnswer1-2">
                                 </label>
                             </fieldset>
 
@@ -288,11 +288,11 @@
                             <fieldset class="answerTOF">
                                 <label for="trueReading1-3">
                                     TRUE
-                                    <input type="radio" value="TRUE" id="trueReading1-3">
+                                    <input type="radio" value="TRUE" id="trueReading1-3" name="readingAnswer1-3">
                                 </label>
                                 <label for="falseReading1-3">
                                     FALSE
-                                    <input type="radio" value="TRUE" id="falseReading1-3">
+                                    <input type="radio" value="TRUE" id="falseReading1-3" name="readingAnswer1-3">
                                 </label>
                             </fieldset>
 
@@ -304,11 +304,11 @@
                             <fieldset class="answerTOF">
                                 <label for="trueReading1-4">
                                     TRUE
-                                    <input type="radio" value="TRUE" id="trueReading1-4">
+                                    <input type="radio" value="TRUE" id="trueReading1-4" name="readingAnswer1-4">
                                 </label>
                                 <label for="falseReading1-4">
                                     FALSE
-                                    <input type="radio" value="TRUE" id="falseReading1-4">
+                                    <input type="radio" value="TRUE" id="falseReading1-4" name="readingAnswer1-4">
                                 </label>
                             </fieldset>
 
@@ -320,11 +320,11 @@
                             <fieldset class="answerTOF">
                                 <label for="trueReading1-5">
                                     TRUE
-                                    <input type="radio" value="TRUE" id="trueReading1-5">
+                                    <input type="radio" value="TRUE" id="trueReading1-5" name="readingAnswer1-5">
                                 </label>
                                 <label for="falseReading1-5">
                                     FALSE
-                                    <input type="radio" value="TRUE" id="falseReading1-5">
+                                    <input type="radio" value="TRUE" id="falseReading1-5" name="readingAnswer1-5">
                                 </label>
                             </fieldset>
 
@@ -336,11 +336,11 @@
                             <fieldset class="answerTOF">
                                 <label for="trueReading1-6">
                                     TRUE
-                                    <input type="radio" value="TRUE" id="trueReading1-6">
+                                    <input type="radio" value="TRUE" id="trueReading1-6" name="readingAnswer1-6">
                                 </label>
                                 <label for="falseReading1-6">
                                     FALSE
-                                    <input type="radio" value="TRUE" id="falseReading1-6">
+                                    <input type="radio" value="TRUE" id="falseReading1-6" name="readingAnswer1-6">
                                 </label>
                             </fieldset>
 
@@ -352,11 +352,11 @@
                             <fieldset class="answerTOF">
                                 <label for="trueReading1-7">
                                     TRUE
-                                    <input type="radio" value="TRUE" id="trueReading1-7">
+                                    <input type="radio" value="TRUE" id="trueReading1-7" name="readingAnswer1-7">
                                 </label>
                                 <label for="falseReading1-7">
                                     FALSE
-                                    <input type="radio" value="TRUE" id="falseReading1-7">
+                                    <input type="radio" value="TRUE" id="falseReading1-7" name="readingAnswer1-7">
                                 </label>
                             </fieldset>
 
@@ -368,38 +368,38 @@
                             <fieldset class="answerTOF">
                                 <label for="trueReading1-8">
                                     TRUE
-                                    <input type="radio" value="TRUE" id="trueReading1-8">
+                                    <input type="radio" value="TRUE" id="trueReading1-8" name="readingAnswer1-8">
                                 </label>
                                 <label for="falseReading1-8">
                                     FALSE
-                                    <input type="radio" value="TRUE" id="falseReading1-8">
+                                    <input type="radio" value="TRUE" id="falseReading1-8" name="readingAnswer1-8">
                                 </label>
                             </fieldset>
 
                        </div>
                     </div>
 
-                    <div th:fragment="respuestasReading1(${respuestas}, ${preguntas}, ${apartadoUsado})" style="display: flex; flex-direction: column" id="readingDDContainer">
+                    <div  style="display: flex; flex-direction: column" id="readingDDContainer">
 
                         <div class="dragAndDropAnswerContainer">
-                            <span draggable="true" id="answerReading1-9">patch</span>
-                            <span draggable="true" id="answerReading1-10">glasses</span>
-                            <span draggable="true" id="answerReading1-11">smartwatch</span>
-                            <span draggable="true" id="answerReading1-12">headband</span>
-                            <span draggable="true" id="answerReading1-13">bra</span>
-                            <span draggable="true" id="answerReading1-14">jacket</span>
-                            <span draggable="true" id="answerReading1-15">make-up</span>
-                            <span draggable="true" id="answerReading1-16"> fitness tracker</span>
-                            <span draggable="true" id="answerReading1-17">ring </span>
-                            <span draggable="true" id="answerReading1-18">hat</span>
+                            <span draggable="true" id="answerReading1-9" class="answerReadingDrag">patch</span>
+                            <span draggable="true" id="answerReading1-10" class="answerReadingDrag">glasses</span>
+                            <span draggable="true" id="answerReading1-11" class="answerReadingDrag">smartwatch</span>
+                            <span draggable="true" id="answerReading1-12" class="answerReadingDrag">headband</span>
+                            <span draggable="true" id="answerReading1-13" class="answerReadingDrag">bra</span>
+                            <span draggable="true" id="answerReading1-14" class="answerReadingDrag">jacket</span>
+                            <span draggable="true" id="answerReading1-15" class="answerReadingDrag">make-up</span>
+                            <span draggable="true" id="answerReading1-16" class="answerReadingDrag"> fitness tracker</span>
+                            <span draggable="true" id="answerReading1-17" class="answerReadingDrag">ring </span>
+                            <span draggable="true" id="answerReading1-18" class="answerReadingDrag">hat</span>
                         </div>
 
                         <div  class="questionsReading1DD">
-                            <div  class="questionText">1- Adam doesn't want to use headphones for music. He needs a smart <input class="dropZoneReading" id="questionReading1-9"> .</div>
-                            <div  class="questionText">2- A kind of wearable technology that is not electronic is <input class="dropZoneReading" id="questionReading1-10"></div>
-                            <div  class="questionText">3- He wears a <input class="dropZoneReading" id="questionReading1-11"> when he goes running. It counts distance and calories.</div>
-                            <div  class="questionText">4- Bob wears a kind of <input class="dropZoneReading" id="questionReading1-12">  that collects information about his blood pressure. </div>
-                            <div  class="questionText">5- Emily can send love to her grandson who lives in Hong Kong using her smart <input class="dropZoneReading" id="questionReading1-13"></div>
+                            <div  class="questionText">1- Adam doesn't want to use headphones for music. He needs a smart <div class="dropZoneReading" id="questionReading1-9"> </div>.</div>
+                            <div  class="questionText">2- A kind of wearable technology that is not electronic is <div class="dropZoneReading" id="questionReading1-10"></div></div>
+                            <div  class="questionText">3- He wears a <div class="dropZoneReading" id="questionReading1-11"> </div>when he goes running. It counts distance and calories.</div>
+                            <div  class="questionText">4- Bob wears a kind of <div class="dropZoneReading" id="questionReading1-12"></div>  that collects information about his blood pressure. </div>
+                            <div  class="questionText">5- Emily can send love to her grandson who lives in Hong Kong using her smart <div class="dropZoneReading" id="questionReading1-13"></div></div>
                         </div>
 
                     </div>
@@ -2083,6 +2083,7 @@
                 </div>
 
 
+                <!-- READING NIVEL 4 -->
                 <div id="reading4" class="englishUseContainer" th:if="${apartadoUsado == 'READING'}">
 
                     <h2 class="marginBottom40">READING COMPREHENSION</h2>
@@ -2477,6 +2478,7 @@
 
     <script th:src="@{/javascript/timer.js}"></script>
     <script th:src="@{/javascript/testDisplay.js}"></script>
+    <script th:src="@{/javascript/testValidation.js}"></script>
 
 <script>
     AOS.init();

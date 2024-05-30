@@ -101,9 +101,16 @@ const tester = document.getElementById("tester");
     observer.observe(tester, { childList: true });
 
 function attachEventListeners(){
+
+    //node de los contenedores para el drag and drop de listening
     const questionContainer = document.querySelectorAll('.dropQuestion');
 
     const answer = document.querySelectorAll('.listeningAnswerContainer');
+
+    //node de los contenedores para el drag de reading
+    const  readingAnswer = document.querySelectorAll('.answerReadingDrag');
+    const  readingDropZone = document.querySelectorAll('.dropZoneReading');
+
 
 
     //mapea el HTML collection de questionContainer para agregarles un addEventListener a todos
@@ -131,15 +138,30 @@ function attachEventListeners(){
             var id = ev.dataTransfer.getData("id");
             var dropedAnswer = document.getElementById(id);
 
+            let spanHijo = questionContainer[i].children[0];
+            const padreID = document.querySelectorAll('.listeningAnswerContainer');
+
 
             if (id != null) {
                 if (questionContainer[i].children.length === 1){
-                    let spanHijo = questionContainer[i].children[0];
 
                     questionContainer[i].replaceChild(dropedAnswer, spanHijo);
+
+                    regresarElementoHijo();
+
+                }else{
+                    ev.target.appendChild(dropedAnswer);
                 }
-                ev.target.appendChild(dropedAnswer);
+
             }
+
+            // REGRESA EL ELEMENTO HIJO A SU CONTENEDOR DE ORIGEN AL SER REEMPLAZADO POR OTRO
+            function regresarElementoHijo(){
+                const transfer = ev.dataTransfer;
+
+                padreID[i].appendChild(spanHijo);
+            }
+
         })
     }
 
@@ -162,7 +184,27 @@ function attachEventListeners(){
         }
 
     }
+
+
+    //Funcion para mapear y agregar addEventListener a los contenedores del drag and drop del apartado reading
+
+    for (let i = 0; i < readingDropZone.length; i++){
+
+        readingDropZone[i].addEventListener('dragover', ev => {
+            ev.preventDefault();
+            readingDropZone[i].classList.add('dropHover');
+        })
+
+        readingDropZone[i].addEventListener('dragleave', ev => {
+            // remueve la clase dropHover del elemento
+            readingDropZone[i].classList.remove('dropHover');
+        })
+
+    }
+
+
 }
+
 
 
 
