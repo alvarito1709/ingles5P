@@ -111,6 +111,8 @@ function attachEventListeners(){
     const  readingAnswer = document.querySelectorAll('.answerReadingDrag');
     const  readingDropZone = document.querySelectorAll('.dropZoneReading');
 
+    const answerContainerReading = document.querySelectorAll('.dragAndDropAnswerContainer');
+
 
 
     //mapea el HTML collection de questionContainer para agregarles un addEventListener a todos
@@ -147,7 +149,7 @@ function attachEventListeners(){
 
                     questionContainer[i].replaceChild(dropedAnswer, spanHijo);
 
-                    regresarElementoHijo();
+                    regresarElementoHijo(padreID[i],spanHijo);
 
                 }else{
                     ev.target.appendChild(dropedAnswer);
@@ -155,12 +157,6 @@ function attachEventListeners(){
 
             }
 
-            // REGRESA EL ELEMENTO HIJO A SU CONTENEDOR DE ORIGEN AL SER REEMPLAZADO POR OTRO
-            function regresarElementoHijo(){
-                const transfer = ev.dataTransfer;
-
-                padreID[i].appendChild(spanHijo);
-            }
 
         })
     }
@@ -200,9 +196,51 @@ function attachEventListeners(){
             readingDropZone[i].classList.remove('dropHover');
         })
 
+        readingDropZone[i].addEventListener('drop', ev => {
+            // remueve la clase dropHover del elemento
+            readingDropZone[i].classList.remove('dropHover');
+
+            var id = ev.dataTransfer.getData("id");
+            var dropedAnswer = document.getElementById(id);
+
+
+            if (id != null) {
+                if (readingDropZone[i].children.length === 1){
+
+                    readingDropZone[i].appendChild(dropedAnswer);
+
+                    regresarElementoHijo(answerContainerReading[0],readingDropZone[i].children[0]);
+
+                }else{
+                    ev.target.appendChild(dropedAnswer);
+                }
+
+            }
+
+
+        })
+
+    }
+
+    for (let i = 0; i < readingAnswer.length; i++){
+        readingAnswer[i].addEventListener('dragstart', ev =>{
+
+            let answerId = readingAnswer[i].id;
+
+            const transfer = ev.dataTransfer;
+            transfer.setData('id',answerId);
+
+        })
     }
 
 
+}
+
+
+// REGRESA EL ELEMENTO HIJO A SU CONTENEDOR DE ORIGEN AL SER REEMPLAZADO POR OTRO
+function regresarElementoHijo(padreID, spanHijo){
+
+    padreID.appendChild(spanHijo);
 }
 
 

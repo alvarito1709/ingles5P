@@ -1,4 +1,4 @@
-var hour = 0;
+/* var hour = 0;
 var minute = 10;
 var second = 60;
 
@@ -57,6 +57,9 @@ function setUpTimer(mSecond){
     }
 
 }
+
+
+ */
 
 
 

@@ -89,7 +89,7 @@ public class User implements Serializable {
         return rol;
     }
 
-    public void setRol (){
+    public void setRol (String rol){
         this.rol = rol;
     }
 
